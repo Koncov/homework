@@ -1,0 +1,22 @@
+.block-1 {
+  background: #000;
+  width: 200px;
+  height: 200px;
+  color: #ffff00;
+}
+
+.block {
+  background: #7e68fd;
+}
+
+div.block {
+  background: #fd5335;
+}
+
+div {
+  background: #23df02;
+}
+
+#block {
+  background: #658780;
+}
