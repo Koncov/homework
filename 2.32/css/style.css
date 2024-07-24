@@ -1,0 +1,29 @@
+.block, .inline {
+  background: #e2e2e2;
+}
+
+.img {
+  padding: 5px;
+  border-radius: 50%;
+  border: 2px solid #067a32;
+}
+
+.img:hover {
+  padding: 2px;
+  border: 5px solid #35d028;
+  outline: 3px solid #067a32;
+}
+
+.block {
+  padding: 40px;
+  margin: 40px;
+  border: 1px solid #000;
+  border-radius: 25px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.inline {
+  padding: 20px;
+  margin: 20px;
+}
