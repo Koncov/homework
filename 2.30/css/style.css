@@ -1,0 +1,15 @@
+.block, .inline {
+  background: #e2e2e2;
+}
+
+.img {
+  width: 200px;
+}
+
+.block {
+  padding: 40px;
+}
+
+.inline {
+  padding: 20px;
+}
