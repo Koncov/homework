@@ -1,0 +1,15 @@
+.block {
+  background: #e2e2e2;
+  max-width: 500px;
+  max-height: 100px;
+}
+
+.inline {
+  background: #e2e2e2;
+  max-width: 500px;
+  max-height: 100px;
+}
+
+.img {
+  width: 200px;
+}
