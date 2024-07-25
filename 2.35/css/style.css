@@ -1,0 +1,42 @@
+.block, .inline {
+  background: #e2e2e2;
+}
+
+.img {
+  padding: 5px;
+  border-radius: 50%;
+  border: 2px solid #067a32;
+}
+
+.img:hover {
+  padding: 2px;
+  border: 5px solid #35d028;
+  outline: 3px solid #067a32;
+  box-shadow: 0 0 15px 2px #1b30f3;
+  opacity: .5;
+}
+
+.block {
+  padding: 40px;
+  margin: 40px;
+  border: 1px solid #000;
+  border-radius: 25px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  max-width: 400px;
+  box-shadow: -3px 3px 7px #1b30f3;
+
+  display: inline-block;
+}
+
+.block-1 {
+  visibility: hidden;
+}
+
+.inline {
+  width: 300px;
+  padding: 20px;
+  margin: 20px;
+
+  display: block;
+}
