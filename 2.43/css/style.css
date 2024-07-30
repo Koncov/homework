@@ -15,7 +15,7 @@ body {
 /* ============================================================= */
 
 .header {
-padding: 30px 36px;
+  padding: 30px 36px;
 }
 
 .header-inner {
@@ -41,4 +41,5 @@ padding: 30px 36px;
   color: #2766ae;
   font-weight: 500;
   padding: 14px 30px;
+  margin-left: 4px;
 }
