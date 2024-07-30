@@ -13,6 +13,7 @@ body {
 }
 
 /* ============================================================= */
+/* ==== HEADER ==== */
 
 .header {
   padding: 30px 36px;
@@ -43,3 +44,69 @@ body {
   padding: 14px 30px;
   margin-left: 4px;
 }
+
+/* ==== MAIN ==== */
+
+.hero {
+  padding: 120px 0;
+  background: url("../img/hero-bg.jpg") 10% 50% / cover no-repeat;
+}
+
+.hero-title {
+  font-weight: 600;
+  font-size: 40px;
+  text-transform: uppercase;
+  line-height: 49px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-text {
+  max-width: 436px;
+}
+
+.hero-text span {
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #01a2cb;
+}
+
+.hero-paragraph {
+  margin-bottom: 15px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 320px;
+}
+
+.hero-button-one,
+.hero-button-two {
+  border-radius: 100px;
+  padding: 18px 30px;
+  background: linear-gradient(180deg, #00a4cc 0%, #2766ae 100%);
+  max-width: 320px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.hero-button-two img {
+  margin-left: 4px;
+}
+
+.hero-button-two {
+  background: linear-gradient(129deg, #00a4cc 0%, #2766ae 100%);
+  margin-top: 10px;
+}
+
+.hero-button-two {}
