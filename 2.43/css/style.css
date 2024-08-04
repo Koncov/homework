@@ -49,6 +49,7 @@ body {
 
 .hero {
   padding: 120px 0;
+  border: 1px solid #000;
   background: url(../img/hero-bg.jpg) 10% 50% / cover no-repeat;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
