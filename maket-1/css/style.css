@@ -1,21 +1,20 @@
 body, html {
-  background: #181e34;
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
   color: #fff;
-  line-height: 150%;
+  background: #181e34;
 }
 
 .container {
   max-width: 930px;
   padding: 0 15px;
   margin: 0 auto;
+  height: 100%;
 }
-
 
 /* ===== Header ===== */
 
 .header {
-  padding: 30px 0 36px;
+  padding: 30px 36px;
 }
 
 .header-inner {
@@ -35,78 +34,12 @@ body, html {
   margin-right: 30px;
 }
 
-.header-button {
+.header-btn {
   font-weight: 500;
+  line-height: 20px;
   color: #2766ae;
-  margin-left: 4px;
   border-radius: 100px;
   padding: 14px 30px;
   background: #fff;
-}
-
-/* ===== Main ===== */
-
-.main {}
-
-/* ===== Section hero ===== */
-
-.main-hero {
-  padding: 120px 0 120px;
-  border: 1px solid #000;
-  background: url("../img/hero-bg.jpg") 10% 100% / cover no-repeat;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-}
-
-h1 {
-  font-weight: 600;
-  font-size: 40px;
-  line-height: 49px;
-  text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.main-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.main-content {
-  max-width: 436px;
-}
-
-.main-paragraph {
-  margin-bottom: 15px;
-}
-
-.main-content span {
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #01a2cb;
-}
-
-.main-buttons {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 320px;
-  margin-bottom: 10px;
-}
-
-.main-btn-one,
-.main-btn-two {
-  border-radius: 100px;
-  padding: 18px 30px;
-  background: linear-gradient(180deg, #00a4cc 0%, #2766ae 100%);
-  font-weight: 500;
-  padding: 18px;
-  display: flex;
-  justify-content: center;
-}
-
-.main-btn-two {
-  margin-top: 10px;
-  background: linear-gradient(129deg, #00a4cc 0%, #2766ae 100%);
-
+  margin-left: 4px;
 }
