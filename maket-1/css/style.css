@@ -185,13 +185,12 @@ body, html {
 }
 
 .footer-text {
-  max-width: 260px;
+  max-width: 267px;
 }
 
 .footer-text p {
   margin-top: 15px;
 }
-
 
 .footer-row-one,
 .footer-row-two {
