@@ -172,3 +172,47 @@ body, html {
   max-width: 436px;
   margin: 0 auto;
 }
+
+/* ===== Footer ===== */
+
+.footer {
+  border-top: 1px solid #323952;
+  padding: 60px 0;
+}
+
+.footer-inner {
+  display: flex;
+}
+
+.footer-text {
+  max-width: 260px;
+}
+
+.footer-text p {
+  margin-top: 15px;
+}
+
+
+.footer-row-one,
+.footer-row-two {
+  width: 100%;
+  max-width: 230px;
+}
+
+.margin {
+  margin-left: auto;
+}
+
+.footer-row-one h4,
+.footer-row-two h4 {
+  font-weight: 600;
+  font-size: 22px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  line-height: 27px;
+}
+
+.footer-item-row-one,
+.footer-item-row-two {
+  margin-top: 10px;
+}
