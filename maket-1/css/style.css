@@ -2,6 +2,7 @@ body, html {
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
   color: #fff;
   background: #181e34;
+  line-height: 150%;
 }
 
 .container {
@@ -42,4 +43,132 @@ body, html {
   padding: 14px 30px;
   background: #fff;
   margin-left: 4px;
+}
+
+/* ===== Main ===== */
+/* ===== Section-hero ===== */
+
+.hero {
+  padding: 120px 0;
+  background: url("../img/hero-bg.jpg") 10% 50% / cover no-repeat;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.hero-title {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 49px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-text {
+  max-width: 436px;
+
+}
+
+.hero-paragraph {
+  margin-bottom: 15px;
+}
+
+.hero-paragraph span {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #01a2cb;
+}
+
+.hero-buttons {
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-btn-one,
+.hero-btn-two {
+  font-weight: 500;
+  text-align: center;
+  border-radius: 100px;
+  background: linear-gradient(180deg, #00a4cc 0%, #2766ae 100%);
+  padding: 18px 0;
+}
+
+.hero-btn-two {
+  background: linear-gradient(129deg, #00a4cc 0%, #2766ae 100%);
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.hero-btn-two img {
+  margin-left: 7px;
+}
+
+/* ===== Section-content ===== */
+
+.main-content {
+  padding: 120px 0;
+}
+
+.main-content-h2 {
+  max-width: 513px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+
+.main-content-h2 h2 {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 49px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.main-content-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.main-content-card {
+  padding: 28px;
+  border: 2px solid #176bae;
+  border-radius: 16px;
+  box-shadow: 4px 4px 13px 0 rgba(5, 13, 41, 0.76);
+  background: #197cb8;
+  max-width: 204px;
+  margin-bottom: 28px;
+}
+
+.main-content-card h3 {
+  font-weight: 600;
+  font-size: 22px;
+  text-transform: uppercase;
+  line-height: 27px;
+}
+
+.main-content-card p {
+  text-align: center;
+}
+
+.main-content-btn {
+  background: linear-gradient(180deg, #00a4cc 0%, #2766ae 100%);
+  border-radius: 100px;
+  padding: 18px;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  width: 100%;
+  display: block;
+  width: 100%;
+  max-width: 436px;
+  margin: 0 auto;
 }
