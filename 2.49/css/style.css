@@ -12,6 +12,7 @@ fieldset {
   box-shadow: -4px 4px #1f1e1e3f;
   margin: 50px;
   align-items:end;
+  max-width: 450px;
 }
 
 .contacts,
