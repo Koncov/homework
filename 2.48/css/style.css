@@ -1,0 +1,11 @@
+body {
+  background: #c5c3c3;
+}
+
+fieldset {
+  max-width: 312px;
+  padding: 20px;
+  margin: 50px;
+  background: #b1afaf;
+  box-shadow: -4px 4px #1f1e1e3f;
+}
