@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../src/logo.ico" type="image/x-icon">
+  <title>Домашнее задание к уроку 2.49</title>
+  <!-- <link rel="stylesheet" href="./css/reset.css"> -->
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <fieldset class="visit">
+    <legend>Запись на техосомтр.</legend>
+    <form>
+      <fieldset class="contacts">
+        <legend>Контактные данные</legend>
+        <label for="inp1">Ваша фамилия</label>
+        <input type="text" id="inp1" placeholder="Пупкин">
+        <br>
+        <label>Ваше имя <input type="text" placeholder="Василий"></label>
+        <br>
+        <label>Введите телефон<input type="tel" placeholder=" +7(9--)--- -- -- "></label>
+        <br>
+        <label>Введите почту<input type="email" placeholder=" email@exampe.com "></label>
+        <br>
+        <select name="formSelect">
+          <option value=""> -== Выберите Ваш пол ==- </option>
+          <option value="male">Мужской</option>
+          <option value="female">Женский</option>
+        </select>
+      </fieldset>
+
+      <fieldset class="car">
+        <legend>Транспортное средство</legend>
+        <select name="formCar">
+          <option value=""> -== Ваш автомобиль ==- </option>
+          <option value="rus">Отечественный автомобиль</option>
+          <option value="notrus">Иномарка</option>
+        </select>
+        <br><br>
+        <label><input type="checkbox">Замена масла</label>
+        <label><input type="checkbox">Мойка</label>
+        <label><input type="checkbox">Ремонт двигателя</label>
+        <br>
+        <label><input type="checkbox">Ремонт трансмиссии</label>
+        <br>
+        <label><input type="radio" name="car">Гарантийный ремонт</label>
+        <label><input type="radio" name="car">Постгарантийный ремонт</label>
+        <br>
+      </fieldset>
+
+      <br>
+      <label>Дата \ Время обслуживания<input type="datetime-local"></label>
+      <br>
+      <label>Прикрепить скан ПТС \ СТС <input type="file"></label>
+      <textarea cols="120" role="5" placeholder="Введите сообщение"></textarea>
+      <br>
+
+      <button type="reset">Сбросить</button>
+      <button type="button">Отправить</button>
+
+    </form>
+  </fieldset>
+
+</body>
+
+</html>

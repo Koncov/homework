@@ -1,0 +1,19 @@
+body {
+  background: #c5c3c3;
+}
+
+fieldset {
+  padding: 20px;
+  background: #b1afaf;
+}
+
+.visit {
+  /* max-width: 312px; */
+  box-shadow: -4px 4px #1f1e1e3f;
+  margin: 50px;
+  align-items:end;
+}
+
+.contacts,
+.car {
+}
