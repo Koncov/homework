@@ -1,0 +1,37 @@
+table,
+/* thead,
+tbody,
+tfoot, */
+tr,
+td,
+th,
+caption {
+  border: 1px solid #ffb0b0;
+  text-align: center;
+  padding: 5px;
+}
+
+table {
+  margin: 20px 50px;
+  padding: 0;
+  background: #00940c;
+  box-shadow: 4px 4px #11A21A;
+}
+
+th {
+  background: #a4ff80;
+}
+
+td {
+  background: #fff986;
+}
+
+tfoot td {
+  background: #d7dffa;
+}
+
+.td-content {
+  background: #fdeaea;
+  text-decoration: underline;
+  color: #a30000;
+}
