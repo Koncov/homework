@@ -96,7 +96,7 @@ body {
 }
 
 .block {
-  background: linear-gradient(135deg, rgba(0, 25, 248, 0.35), rgba(32, 3, 87, 0.169)), url("../img/stock-vector-imagine-word-written-on-black-background-with-colorful-rainbow-streaks-and-glowing-sparkling-1747212233.jpg") 0% 20% / cover no-repeat;
+  background: linear-gradient(135deg, rgba(0, 25, 248, 0.593), rgba(32, 3, 87, 0.356)), url("../img/stock-vector-imagine-word-written-on-black-background-with-colorful-rainbow-streaks-and-glowing-sparkling-1747212233.jpg") 0% 20% / cover no-repeat;
 }
 
 .block:hover {
