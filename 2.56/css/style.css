@@ -48,3 +48,64 @@ body {
 
 /* ======================================================== */
 
+:focus {
+  box-shadow: 0 0 60px 1px #00ff2f;
+}
+
+.link:hover {
+  background: #000000;
+  border: 1px solid #ffffff;
+}
+
+.button:hover {
+  background: #000000;
+  border: 1px solid #ffffff;
+}
+
+.button:active {
+  background: #00ff2f;
+  border: 1px solid #ffffff;
+}
+
+.input:focus {
+  box-shadow: 0 0 60px 1px #00ff2f;
+}
+
+.list__item:first-child {
+  color: #00ff2f;
+}
+
+.list__item:last-child {
+  color: #0915ff;
+}
+
+.list__item:nth-child(4) {
+  color: #ea00ff;
+}
+
+.list__item:nth-child(odd) {
+  background: #fcef0054;
+}
+
+.list__item:nth-child(even) {
+  background: #fc000054;
+}
+
+.list__other:nth-child(4) {
+  background: #555;
+}
+
+.block {
+  background: linear-gradient(135deg, rgba(0, 25, 248, 0.35), rgba(32, 3, 87, 0.169)), url("../img/stock-vector-imagine-word-written-on-black-background-with-colorful-rainbow-streaks-and-glowing-sparkling-1747212233.jpg") 0% 20% / cover no-repeat;
+}
+
+.block:hover {
+  color: #000000;
+  text-shadow: 0 0 3px rgb(212, 255, 0);
+}
+
+.block__title:hover,
+.block__item:hover {
+  /* color: #ffe600; */
+  text-shadow: 0 0 8px rgb(212, 255, 0);
+}
