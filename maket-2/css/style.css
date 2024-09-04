@@ -11,3 +11,165 @@ body {
   padding: 0 15px;
   height: 100%;
 }
+
+/* ============================================================== */
+
+.header {
+  line-height: 1.5;
+}
+
+.header__inner {
+  min-height: 108px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 15px;
+  align-content: center;
+  align-items: center;
+}
+
+.header__logo {
+  max-width: 54px;
+}
+
+.nav {}
+
+.nav__list {
+  display: flex;
+  gap: 10px 30px;
+  flex-wrap: wrap;
+}
+
+/* .header__inner>*:last-child {
+  justify-self: end;
+} */
+
+.header__socials {
+  justify-content: end;
+}
+
+.nav__item {}
+
+.nav__link {}
+
+
+
+.socials {
+  display: flex;
+  gap: 10px 30px;
+  flex-wrap: wrap;
+}
+
+.socials__item {}
+
+.socials__link {}
+
+/* ======================================================= */
+
+.main {}
+
+.hero {
+  padding: 120px 0;
+  /* background: #12163b; */
+  line-height: 1.5;
+  color: #f8fcff;
+  position: relative;
+}
+
+.hero__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero__title {
+  font-weight: 600;
+  font-size: 52px;
+  margin-bottom: 30px;
+}
+
+.hero__list {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.hero__list-item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 15px;
+  transition: all .5s;
+}
+
+.hero__list-item:last-child {
+  margin-bottom: 0px;
+}
+
+.hero__list-item path {
+  transition: all .5s;
+}
+
+.hero__list-item:hover {
+  color: #1d6fb6;
+}
+
+.hero__list-item:hover path {
+  fill: #1d6fb6;
+}
+
+.hero__video {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero__video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__video::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  background: #102E49cc;
+  /* opacity: .8; */
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 500;
+  font-size: 16px;
+  color: #1d6fb6;
+  line-height: 20px;
+
+  width: 100%;
+  max-width: 288px;
+  height: 56px;
+  background: #d0dce7;
+  border-radius: 100px;
+  transition: all .5s;
+}
+
+.button:hover {
+  color: #f8fcff;
+  background: #83add3;
+}
+
+.hero {
+  background-image: #102E49cc, url("../media/hero-bg.mp4");
+}
