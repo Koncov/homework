@@ -75,7 +75,7 @@ body {
   color: #f8fcff;
   position: relative;
 
-  display: none;
+  /* display: none; */
 }
 
 .hero__inner {
