@@ -24,12 +24,11 @@ body {
 }
 
 .header__inner {
-  min-height: 108px;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   gap: 15px;
-  align-content: center;
   align-items: center;
+  min-height: 108px;
 }
 
 .header__logo {

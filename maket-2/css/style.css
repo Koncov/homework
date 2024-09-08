@@ -1,0 +1,22 @@
+:root {
+  --black-color: #25282b;
+  --blue-color: #1d6fb6;
+  --white-color: #f8fcff;
+}
+
+body {
+  font-family: "Montserrat", "Arial", sans-serif;
+  line-height: 20px;
+  color: var(--black-color);
+  background: var(--white-color);
+}
+
+.container {
+  max-width: 1230px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* ================================================================= */
+
