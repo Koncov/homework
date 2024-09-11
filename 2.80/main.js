@@ -3,7 +3,9 @@
 // 3) Перепишите 1 и 2 цикл используя цикл while.
 
 for (let i = 2; i <= 12; i++) {
-  console.log(i)
+  if (i % 2 == 0) {
+    console.log(i)
+  }
 }
 
 console.log('===============================')
@@ -15,15 +17,17 @@ for (let a = 10; a >= 1; a--) {
 console.log('===============================')
 
 b = 1
-while(b < 12) {
-b++
+while (b < 12) {
+  b++
   console.log(b)
 }
 
 console.log('===============================')
 
-c = 11
-while(c >= 2) {
-  c--
-  console.log(c)
+c = 0
+while (c <= 12) {
+  c++
+  if (c % 2 == 0) {
+    console.log(c)
+  }
 }
