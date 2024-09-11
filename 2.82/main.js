@@ -16,7 +16,6 @@ const numbers = [1, 5, 66, 4, 51, 99, 1, 0, 7, 47, 222]
 function searchNumber(array) {
   for (let i = 0; i < array.length; i++) {
     if (array[i] > 10) {
-      // return array[i]
       console.log(array[i]) 
     }
   }
