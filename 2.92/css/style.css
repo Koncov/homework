@@ -18,6 +18,11 @@
   transition: all .4s;
 }
 
+.modal--open {
+  opacity: 1;
+  visibility: visible;
+}
+
 .modal__window {
   position: relative;
   width: 50vw;
