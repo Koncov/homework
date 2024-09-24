@@ -86,7 +86,6 @@
 .nav__list {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 4vh 40px;
 }
 

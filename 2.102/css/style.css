@@ -87,6 +87,7 @@ transition: all .4s;
 
 .nav__list {
   display: flex;
+  align-items: center;
   gap: 4vh 40px;
 }
 
