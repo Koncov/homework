@@ -7,11 +7,14 @@
   --accent-color: #FFA55C;
 }
 
-body {
+.body {
   font-family: "Montserrat", "Arial", serif;
   line-height: 1.5;
   color: var(--general-text);
   background: var(--general-bg);
+}
+.body--opened-burger-menu {
+  overflow: hidden;
 }
 
 .wrapper {
@@ -73,16 +76,18 @@ body {
 
 .header__logo {
   max-width: 174px;
+  z-index: 11;
 }
 
 .nav {
+  transition: all .4s;
 }
 
 .nav__list {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 40px;
+  gap: 4vh 40px;
 }
 
 .nav__item {
@@ -113,6 +118,57 @@ body {
 
 .nav__link:hover::before {
   opacity: 1;
+}
+
+.body--opened-burger-menu .nav {
+  transform: translateY(0%);
+  opacity: 1;
+  visibility: visible;
+}
+
+.burger-icon {
+  display: none;
+  width: 50px;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+  z-index: 11;
+}
+
+.burger-icon span,
+.burger-icon span::before,
+.burger-icon span::after {
+  width: 30px;
+  height: 3px;
+  background: var(--general-text);
+  border-radius: 100px;
+  position: relative;
+}
+
+.burger-icon span::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+}
+
+.burger-icon span::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+}
+
+.body--opened-burger-menu .burger-icon span {
+  background: transparent;
+}
+
+.body--opened-burger-menu .burger-icon span::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.body--opened-burger-menu .burger-icon span::after {
+  top: 0;
+  transform: rotate(-45deg);
 }
 
 /*#endregion*/
@@ -234,7 +290,32 @@ transition: all .4s;
 /*! =================  media 900px  ================ */
 /*#region*/
 
+@media (max-width:900px) {
+  .nav {
+    position: fixed;
+    inset: 0;
+    background: var(--general-bg);
+    padding: 26vh  30px 30px 30px;
+    z-index: 10;
+    font-size: 24px;
 
+    transform: translateY(-100%);
+    opacity: 1;
+    visibility: hidden;
+  } 
+
+  .nav__list {
+    flex-direction: column;
+  }
+
+  .nav__link:hover::before {
+    opacity: 0;
+}
+
+  .burger-icon {
+    display: flex;
+  }
+}
 
 /*#endregion*/
 
