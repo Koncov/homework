@@ -13,12 +13,13 @@
 
 <body class="body">
   <div class="wrapper">
-
     <header class="header">
       <div class="header__top">
         <div class="container">
-          <div class="header__inner">
-            <img src="./img/icons/logos/logo-dark.svg" alt="LOGO" class="header__logo">
+          <div class="header__top-inner">
+            <a class="header__logo" href="#">
+              <img src="./img/icons/logos/logo-dark.svg" alt="Wake Bake">
+            </a>
             <nav class="nav">
               <ul class="nav__list">
                 <li class="nav__item">
@@ -35,34 +36,45 @@
                 </li>
               </ul>
             </nav>
-            <a class="burger-icon" href="#"><span></span></a>
+
+            <a class="burger-icon" href="#">
+              <span></span>
+            </a>
+
           </div>
         </div>
       </div>
-
       <section class="hero">
         <div class="container">
           <div class="hero__inner">
             <div class="hero__content">
               <div class="hero__info">
-                <span>Старт</span><span>26.06.2023</span>
+                <span>Старт</span>
+                <span>26.06.2023</span>
               </div>
               <h1 class="hero__title">
-                Научись печь торты и десерты с нуля
+                Научись печь торты и десерты с нуля
               </h1>
               <p class="hero__text">
-                За 8 практических занятий ты получишь новые возможности для самореализации и любимое дело
+                За 8 практических занятий ты получишь новые возможности для самореализации и любимое дело
               </p>
-              <a href="#" class="hero__button button">Записаться на курс</a>
-            </div>
 
-            <div class="hero__img">
-              <img src="./img/content/girl.png" alt="">
-              <div class="hero__img-control">
-                <a data-fslightbox="gallery" class="hero__img-button" href="./video/cake.mp4">
+              <div class="hero__img-control hero__img-control--mobile">
+                <a data-fslightbox href="./video/cake.mp4" class="hero__img-button">
                   <img src="./img/icons/play.svg" alt="">
-                </a >
-                  Посмотри, как готовятся наши торты
+                </a>
+                Посмотри, как готовятся наши торты
+              </div>
+
+              <a class="hero__button button" href="#">Записаться на курс</a>
+            </div>
+            <div class="hero__img">
+              <img src="./img/content/girl.png" alt="Девушка с тортом в руках">
+              <div class="hero__img-control">
+                <a data-fslightbox="gallery" href="./video/cake.mp4" class="hero__img-button">
+                  <img src="./img/icons/play.svg" alt="">
+                </a>
+                Посмотри, как готовятся наши торты
               </div>
             </div>
           </div>
@@ -75,7 +87,8 @@
   </div>
 
 
-<script src="./js/fslightbox.js"></script>
+
+  <script src="./js/fslightbox.js"></script>
   <script src="./js/main.js"></script>
 
 </body>

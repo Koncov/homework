@@ -1,19 +1,21 @@
 (function () {
 
-    document.addEventListener('click', burgerInit)
+    document.addEventListener('click', burgerMenuEvent)
 
-    function burgerInit(e) {
+    function burgerMenuEvent(event) {
 
-        const burgerIcon = e.target.closest('.burger-icon')
-        const burgerNavLink = e.target.closest('.nav__link')
+        const burgerIconMenu = event.target.closest('.burger-icon')
+        const burgerLinkMenu = event.target.closest('.nav__link')
+        const burgerLogoMenu = event.target.closest('.header__logo')
 
-        if (!burgerIcon && !burgerNavLink) return
+        if (!burgerIconMenu && !burgerLinkMenu && !burgerLogoMenu) return
         if (document.documentElement.clientWidth > 900) return
 
-        if (!document.body.classList.contains('body--opened-menu')) {
-            document.body.classList.add('body--opened-menu')
+        if (!document.body.classList.contains('body--opened-burger-menu')) {
+            if (burgerLogoMenu) return
+            document.body.classList.add('body--opened-burger-menu')
         } else {
-            document.body.classList.remove('body--opened-menu')
+            document.body.classList.remove('body--opened-burger-menu')
         }
     }
 })()
