@@ -372,6 +372,11 @@ padding-left: 8.8%;
   .hero__title {
     font-size: 12vw;
   }
+
+  .nav {
+    padding: 20vh 20px 30px;
+    font-size: 24px;
+  }
 }
 
 
