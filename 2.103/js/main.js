@@ -11,11 +11,11 @@
         if (!burgerIconMenu && !burgerLinkMenu && !burgerLogoMenu) return
         if (document.documentElement.clientWidth > 900) return
 
-        if (!document.body.classList.contains('body--opened-burger-menu')) {
+        if (!document.body.classList.contains('body--opened-menu')) {
             if (burgerLogoMenu) return
-            document.body.classList.add('body--opened-burger-menu')
+            document.body.classList.add('body--opened-menu')
         } else {
-            document.body.classList.remove('body--opened-burger-menu')
+            document.body.classList.remove('body--opened-menu')
         }
     }
 })()
