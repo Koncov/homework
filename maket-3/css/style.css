@@ -302,11 +302,11 @@ padding-left: 8.8%;
 /*#region*/
 
 .about {
-  padding: 140px 0;
+  
 }
 
 .main__about {
-
+  padding: 140px 0;
 }
 
 .about__inner {
@@ -327,6 +327,7 @@ padding-left: 8.8%;
   border-radius: 20px;
   padding: 15px 20px;
   width: 299px;
+  height: 130px;
   height: 108px;
   background: #957b97e6;
   color: var(--general-bg);
@@ -369,6 +370,9 @@ padding-left: 8.8%;
 }
 
 .about__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .about__title {
@@ -399,7 +403,7 @@ padding-left: 8.8%;
   display: flex;
   gap: 15px;
   align-items: center;
-  padding: 35px 25px;
+  padding: 29px 24px;
 }
 
 .about__item-img {

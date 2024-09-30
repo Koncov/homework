@@ -375,6 +375,9 @@ padding-left: 8.8%;
 }
 
 .about__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .about__heading {
