@@ -368,22 +368,53 @@ padding-left: 8.8%;
   opacity: 1;
 }
 
-
-
-
-
-
 .about__body {
 }
+
 .about__title {
+  font-family: "Gabriola";
+  font-size: 74px;
+  line-height: .82;
+  color: var(--general-text);
 }
+
 .about__title-text {
+  margin-bottom: 30px;
 }
+
 .about__body-text {
+  margin-bottom: 40px;
 }
+
 .about__grid {
+  display: grid;
+  gap: 32px 32px;
+  grid-template-columns: repeat(2, 1fr);
 }
+
 .about__item {
+  border-radius: 20px;
+  width: 296px;
+  background: var(--accent-bg);
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  padding: 35px 25px;
+}
+
+.about__item-img {
+  border-radius: 50%;
+  border: 1px solid var(--general-text);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.about__item-text {
+  color: var(--general-text);
 }
 
 /*#endregion*/
@@ -515,7 +546,7 @@ transition: var(--transition);
 }
 
 .social__link:hover path {
-fill: var(--accent-color);
+fill: var(--accent-bg);
 }
 
 /*#endregion*/
