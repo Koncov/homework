@@ -297,6 +297,98 @@ padding-left: 8.8%;
   opacity: 1;
 }
 /*#endregion*/
+/** ====================  main  ==================== */
+/*! ================  section about  =============== */
+/*#region*/
+
+.about {
+  padding: 140px 0;
+}
+
+.main__about {
+
+}
+
+.about__inner {
+  display: grid;
+  gap: 53px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.about__img {
+  max-width: 603px;
+  max-height: 543px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.about__img-control {
+  border-radius: 20px;
+  padding: 15px 20px;
+  width: 299px;
+  height: 108px;
+  background: #957b97e6;
+  color: var(--general-bg);
+
+
+  position: absolute;
+  bottom: 4.7%;
+  left: 6%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: left;
+}
+
+.about__img-button {
+  flex-shrink: 0;
+  display: flex;  
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--general-bg);
+  width: 78px;
+  height: 78px;
+  position: relative;
+}
+
+.about__img-button::before {
+  content: '';
+  position: absolute;
+  inset: 5px;
+  border-radius: 50%;
+  border: 1px solid #ceaad0;
+
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.about__img-button:hover::before {
+  opacity: 1;
+}
+
+
+
+
+
+
+.about__body {
+}
+.about__title {
+}
+.about__title-text {
+}
+.about__body-text {
+}
+.about__grid {
+}
+.about__item {
+}
+
+/*#endregion*/
+
+
 /** ===================  footer  =================== */
 /*#region*/
 
