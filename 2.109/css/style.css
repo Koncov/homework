@@ -151,7 +151,6 @@ transition: var(--transition);
   left: 28px;
   font-size: 11px;
   color: #ac907a;
-  width: 100px;
 
   opacity: 0;
   visibility: hidden;
@@ -190,7 +189,6 @@ transition: var(--transition);
   opacity: 1;
   visibility: visible;
 }
-
 
 /*#endregion*/
 /** ===================  header  =================== */
