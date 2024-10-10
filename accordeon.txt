@@ -23,3 +23,35 @@
 
 
 
+    //accordion
+
+    const accordionLists = document.querySelectorAll('.accordion-list')
+
+    accordionLists.forEach(el => {
+
+        
+        //Ели нужна открытая вкладка аккордеона
+        //document.querySelector('.accordion-list__item--opened .accordion-list__content').style.maxHeight = document.querySelector('.accordion-list__item--opened .accordion-list__content').scrollHeight + 'px'
+
+
+        el.addEventListener('click', (event) => {
+
+            const accordionControl = event.target.closest('.accordion-list__control')
+            if (!accordionControl) return
+            const accordionItem = accordionControl.parentElement
+            const accordionContent = accordionControl.nextElementSibling
+
+            accordionItem.classList.toggle('accordion-list__item--opened')
+
+            if (accordionItem.classList.contains('accordion-list__item--opened')) {
+                accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px'
+            } else {
+                accordionContent.style.maxHeight = null
+            }
+        })
+    })
+
+
+
+
+
