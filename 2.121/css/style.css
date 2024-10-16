@@ -617,12 +617,6 @@
     background: var(--accent-color);
 }
 
-
-
-
-
-
-
 .testimonials__slider {
     overflow: visible;
 }
@@ -632,6 +626,7 @@
 }
 
 .testimonials__slide {
+    height: auto;
     border-radius: 20px;
     background: var(--accent-bg);
     border-radius: var(--border-radius);
