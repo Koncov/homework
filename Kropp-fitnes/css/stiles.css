@@ -68,12 +68,12 @@ p:not([class]):not(:last-child) {
 h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     text-transform: uppercase;
+    color: var(--color-light);
 }
 
 .title-medium {
     font-size: clamp(20px, 2.08vw, 40px);
     line-height: 1.3;
-    color: var(--color-light);
 }
 
 .button {
@@ -192,15 +192,6 @@ h1, h2, h3, h4, h5, h6 {
     height: 1px;
     background-color: currentColor;
     box-shadow: 15px 0 0 currentColor;
-}
-
-
-
-
-
-
-
-.content {
 }
 
 .banner {
@@ -364,10 +355,49 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-/* .header,
-.banner {
+.header,
+.banner,
+.motivation {
     display: none;
-} */
+}
+
+
+.training-types {
+    position: relative;
+    max-width: 1920px;
+    margin-inline: auto;
+    padding: 70px 0 120px 0;
+    background-color: var(--color-dark);
+}
+
+.visually-hidden {
+}
+
+.training-types-list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 60px;
+}
+
+.training-types-item {
+    --trainingTypesItemBgIconSize: 80px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 32px;
+    padding-top: var(--trainingTypesItemBgIconSize);
+    background: url('../icons/transparent-arrow-bottom-left.svg') 100% 0/var(--trainingTypesItemBgIconSize) no-repeat;
+}
+
+.training-types-images {
+}
+
+.training-types-item-title {
+    font-size: 16px;
+    line-height: 1.75;
+    letter-spacing: 0.05em;
+}
 
 
 
@@ -375,6 +405,12 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 1991px) {
     .motivation-card-image {
         margin-block: -20px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .training-types-list {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -459,5 +495,19 @@ h1, h2, h3, h4, h5, h6 {
 
     .motivation-card-description:not(:last-child) {
     margin-bottom: 20px;
-}
+    }
+
+    .training-types-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    }
+
+    .training-types-item {
+        --trainingTypesItemBgIconSize: 60px;
+        row-gap: 10px;
+    }
+
+    .training-types-images {
+        max-width: 120px;
+    }
 }
