@@ -389,15 +389,6 @@ h1, h2, h3, h4, h5, h6 {
     margin-block: -60px;
 }
 
-
-.header,
-.banner,
-.motivation,
-.training-types {
-    display: none;
-}
-
-
 .training-types {
     position: relative;
     max-width: 1920px;
@@ -434,9 +425,6 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.75;
     letter-spacing: 0.05em;
 }
-
-
-
 
 .join-us {
     background-color: var(--color-dark-alternate);
@@ -569,6 +557,14 @@ h1, h2, h3, h4, h5, h6 {
 .button {
 }
 .transparent {
+}
+
+.header,
+.banner,
+.motivation,
+.training-types,
+.join-us {
+    display: none;
 }
 
 
