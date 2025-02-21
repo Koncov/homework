@@ -46,10 +46,20 @@ p:not([class]):not(:last-child) {
     margin-bottom: 24px;
 }
 
+img {
+    display: block;
+    max-width: 100%;
+}
+
 .container {
     max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
     margin-inline: auto;
     padding-inline: var(--container-padding-x);
+}
+
+.container-wide {
+    max-width: 1920px;
+    margin-inline: auto;
 }
 
 .visually-hidden {
@@ -81,6 +91,14 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.2;
 }
 
+.section-description {
+    font-size: 20px;
+    line-height: 1.65;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--color-light);
+}
+
 .backdrop-title {
     position: relative;
     z-index: 2;
@@ -101,10 +119,11 @@ h1, h2, h3, h4, h5, h6 {
     content: attr(data-title);
     position: absolute;
     z-index: -1;
-    top: -0.45em;
+    top: -0.3em;
     left: -0.6em;
     font-family: var(--font-family-accent);
     font-size: 2.8em;
+    line-height: 1;
     color: transparent;
     -webkit-text-stroke: 1px var(--color-light-gray);
     text-stroke: 1px var(--color-light-gray);
@@ -112,7 +131,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .backdrop-title.centered::after {
-    top: -0.42em;
+    top: -0.25em;
     left: 50%;
     translate: -50%;
 }
@@ -391,8 +410,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .training-types {
     position: relative;
-    max-width: 1920px;
-    margin-inline: auto;
     padding: 70px 0 120px 0;
     background-color: var(--color-dark);
 }
@@ -531,14 +548,6 @@ h1, h2, h3, h4, h5, h6 {
 .backdrop-title {
 }
 
-.join-us-form-subtitle {
-    font-size: 20px;
-    line-height: 1.65;
-    text-transform: uppercase;
-    text-align: center;
-    color: var(--color-light);
-}
-
 .join-us-form-body {
     display: flex;
     justify-content: center;
@@ -559,15 +568,93 @@ h1, h2, h3, h4, h5, h6 {
 .transparent {
 }
 
-.header,
-.banner,
-.motivation,
-.training-types,
-.join-us {
-    display: none;
+.location {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
+.location-map-image {
+    height: auto;
+}
 
+.location-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 15px;
+    text-align: center;
+}
+
+.location-title {
+}
+
+.location-title:not(:last-child) {
+    margin-bottom: 14px;
+}
+
+.title-medium {
+}
+.backdrop-title {
+}
+.centered {
+}
+
+.location-description {
+    max-width: 490px;
+}
+
+.location-description:not(:last-child) {
+    margin-bottom: 37px;
+}
+
+.location-button {
+}
+.button {
+}
+.transparent {
+}
+
+.family {
+    background-color: var(--color-dark-gray);
+}
+
+.family-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 7px;
+    padding-block: 132px 62px;
+    text-align: center;
+}
+
+.container {
+}
+.family-title {
+}
+.title-big {
+}
+.backdrop-title {
+}
+.centerder {
+}
+.family-description {
+}
+
+.family-body {
+    display: flex;
+    justify-content: center;
+    column-gap: 26px;
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+}
+
+.container-wide {
+}
+
+.family-image {
+    scroll-snap-align: start;
+}
 
 
 @media (max-width: 1991px) {
@@ -623,6 +710,15 @@ h1, h2, h3, h4, h5, h6 {
 
     .join-us-title:not(:last-child) {
         margin-bottom: 80px;
+    }
+
+    .location {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .family-image {
+        height: 280px;
     }
 }
 
@@ -691,11 +787,11 @@ h1, h2, h3, h4, h5, h6 {
         width: 140px;
     }
 
-        .join-us-title:not(:last-child) {
+    .join-us-title:not(:last-child) {
         margin-bottom: 40px;
     }
 
-    .join-us-form-subtitle {
+    .section-description {
         font-size: 16px;
     }
 
@@ -703,4 +799,35 @@ h1, h2, h3, h4, h5, h6 {
         flex-direction: column;
         align-items: center;
     }
+
+    .location-body {
+        padding-block: 40px;
+    }
+
+    .location-description:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    .family-header {
+        padding-block: 80px 50px;
+    }
+
+    .family-body {
+        column-gap: 12px;
+    }
+
+    .family-image {
+        height: 180px;
+    }    
+}
+
+
+
+.header,
+.banner,
+.motivation,
+.training-types,
+.join-us,
+.location {
+    display: none;
 }
