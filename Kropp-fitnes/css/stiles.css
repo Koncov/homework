@@ -193,8 +193,15 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: var(--border-radius);
 }
 
-.input::placeholder {
+
+
+.input::placeholder,
+select.input:invalid {
     color: var(--color-light-gray);
+}
+
+select.input:hover option {
+    color: var(--color-dark);
 }
 
 .input:hover {
@@ -205,6 +212,18 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--color-dark);
     background-color: var(--color-light-gray);
     outline: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none; 
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
 }
 
 .header {
@@ -314,9 +333,6 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1;
 }
 
-.banner-pagination {
-}
-
 .banner-pagination-list {
     display: flex;
     justify-content: center;
@@ -350,16 +366,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .banner-pagination-button:not(.is-current):hover::after {
     border-color: var(--color-light-gray);
-}
-
-.motivation {
-}
-.motivation-list {
-}
-.visually-hidden {
-}
-
-.motivation-item {
 }
 
 .motivation-item:nth-child(even) {
@@ -397,13 +403,6 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 37px;
 }
 
-.motivation-card-button {
-}
-.button {
-}
-.transparent {
-}
-
 .motivation-card-image {
     margin-block: -60px;
 }
@@ -412,9 +411,6 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     padding: 70px 0 120px 0;
     background-color: var(--color-dark);
-}
-
-.visually-hidden {
 }
 
 .training-types-list {
@@ -432,9 +428,6 @@ h1, h2, h3, h4, h5, h6 {
     row-gap: 32px;
     padding-top: var(--trainingTypesItemBgIconSize);
     background: url('../icons/transparent-arrow-bottom-left.svg') 100% 0/var(--trainingTypesItemBgIconSize) no-repeat;
-}
-
-.training-types-images {
 }
 
 .training-types-item-title {
@@ -527,9 +520,6 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 130px;
 }
 
-.join-us-form {
-}
-
 .join-us-form-header {
     display: flex;
     flex-direction: column;
@@ -541,31 +531,14 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 52px;
 }
 
-.join-us-form-title {
-
-}
-
-.backdrop-title {
-}
-
 .join-us-form-body {
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 
-.visually-hidden {
-}
-
 .join-us-form-input {
     max-width: 400px;
-}
-
-.join-us-form-button {
-}
-.button {
-}
-.transparent {
 }
 
 .location {
@@ -586,18 +559,8 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
-.location-title {
-}
-
 .location-title:not(:last-child) {
     margin-bottom: 14px;
-}
-
-.title-medium {
-}
-.backdrop-title {
-}
-.centered {
 }
 
 .location-description {
@@ -606,13 +569,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .location-description:not(:last-child) {
     margin-bottom: 37px;
-}
-
-.location-button {
-}
-.button {
-}
-.transparent {
 }
 
 .family {
@@ -628,19 +584,6 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
-.container {
-}
-.family-title {
-}
-.title-big {
-}
-.backdrop-title {
-}
-.centerder {
-}
-.family-description {
-}
-
 .family-body {
     display: flex;
     justify-content: center;
@@ -649,12 +592,127 @@ h1, h2, h3, h4, h5, h6 {
     overflow-x: scroll;
 }
 
-.container-wide {
-}
-
 .family-image {
     scroll-snap-align: start;
 }
+
+.calculate {
+    padding-block: 146px;
+    background-color: var(--color-dark-alternate);
+}
+
+.calculate-inner {
+    display: flex;
+    align-items: center;
+    column-gap: 36px;
+}
+
+.calculate-body {
+    flex-grow: 1;
+    max-width: 627px;
+}
+
+.calculate-title:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+.calculate-description {
+    max-width: 360px;
+}
+
+.calculate-description:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.calculate-form-body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px 30px;
+}
+
+.calculate-form-body:not(:last-child) {
+    margin-bottom: 26px;
+}
+
+.calculate-input.wide {
+    grid-column: -1 / 1;
+}
+
+.calculate-table-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 610px;
+}
+
+.calculate-table-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 100%;
+    aspect-ratio: 1;
+    background-color: var(--color-dark);
+    border-radius: 50%;
+}
+
+.calculate-table {
+    position: relative;
+    border-collapse: collapse;
+}
+
+.calculate-table :is(td, th) {
+    padding-right: 30px;
+}
+
+.calculate-table :is(td, th):not(:first-child) {
+    padding-left: 30px;
+}
+
+.calculate-table :is(td, th):not(:last-child) {
+    border-right: 1px solid var(--color-light-gray);
+}
+
+.calculate-table tbody td {
+    border-top: 1px solid var(--color-light-gray);
+}
+
+.calculate-table tbody tr:last-child td:first-child {
+    position: relative;
+}
+
+.calculate-table tbody tr:last-child td:first-child::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 70%;
+    height: 1px;
+    background-color: var(--color-light-gray);
+}
+
+.calculate-table th {
+    padding-block: 20px;
+    text-align: left;
+    text-transform: uppercase;
+    color: var(--color-light);
+}
+
+.calculate-table td {
+    padding-block: 14px;
+}
+
+.calculate-table tfoot {
+    color: var(--color-light);
+}
+
+.calculate-table tfoot td {
+    padding-block: 33px 0;
+}
+
 
 
 @media (max-width: 1991px) {
@@ -719,6 +777,30 @@ h1, h2, h3, h4, h5, h6 {
 
     .family-image {
         height: 280px;
+    }
+
+    .calculate {
+    padding-block: 100px;
+    }
+
+    .calculate-inner {
+    column-gap: 20px;
+    }
+
+    .calculate-form-body {
+    grid-template-columns: 1fr;
+    }
+
+    .calculate-button {
+        width: 100%;
+    }
+
+    .calculate-table :is(td, th) {
+        padding-block: 10px;
+    }
+
+    .calculate-table tfoot td {
+        padding-top: 10px;
     }
 }
 
@@ -818,7 +900,20 @@ h1, h2, h3, h4, h5, h6 {
 
     .family-image {
         height: 180px;
-    }    
+    }
+
+    .calculate {
+        padding-block: 60px;
+    }
+
+    .calculate-inner {
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    .calculate-table-wrapper::before {
+    display: none;
+    }
 }
 
 
@@ -827,6 +922,8 @@ h1, h2, h3, h4, h5, h6 {
 .motivation,
 .training-types,
 .join-us,
-.location {
+.location,
+.family,
+.calculate {
     display: none;
 }
