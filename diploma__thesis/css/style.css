@@ -15,16 +15,7 @@
     --container-width: 1920px; /*под вопросом, скорее всего лишнее*/
     --container-padding-x: 106px;
 
-    --transition-duration: 0.2s;
-}
-
-body {
-    font-family: var(--font-family-second);
-    color: var(--color-light-gray);
-    background-color: var(--color-dark);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.69;
+    --transition-duration: 0.4s;
 }
 
 a,
@@ -43,17 +34,58 @@ a:hover {
     color: var(--color-light-gray);
 }
 
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    clip-path: inset(100%) !important;
+    clip: rect(0 0 0 0) !important;
+    overflow: hidden !important;
+}
+
+body {
+    font-family: var(--font-family-second);
+    color: var(--color-light-gray);
+    background-color: var(--color-dark);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.69;
+}
+
 .container {
     max-width: var(--container-width);
     margin-inline: auto;
     padding-inline: var(--container-padding-x);
-
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-family-first);
     font-weight: 500;
     text-transform: uppercase;
+}
+
+.backdrop-title {
+  position: relative;
+  z-index: 2;
+}
+
+.backdrop-title::after {
+  content: attr(data-title);
+  font-weight: 600;
+  font-size: 2em;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 2px var(--color-white);
+  opacity: 30%;
+
+  position: absolute;
+  z-index: -1;
+  top: 0.13em;
+  right: 0;
 }
 
 .button {
@@ -129,7 +161,7 @@ h1, h2, h3, h4, h5, h6 {
     left: -14px;
     z-index: -1;
     width: 40px;
-    height: 40px;
+    aspect-ratio: 1;
     background-color: var(--color-orange);
     border-radius: 50%;
     transition-duration: var(--transition-duration);
@@ -146,11 +178,6 @@ h1, h2, h3, h4, h5, h6 {
     top: -6px;
     left: -14px;
     z-index: -1;
-    width: 40px;
-    height: 40px;
-    background-color: var(--color-orange);
-    border-radius: 50%;
-    transition-duration: var(--transition-duration);
     opacity: 1;
 }
 
@@ -205,46 +232,107 @@ h1, h2, h3, h4, h5, h6 {
 
 /*#endregion*/
 
-
-
-
-
-
-
-
-
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 100px;
-}
-
-.wrapper {
-    min-height: 100%;
-    width: 100%;
-    overflow: hidden;
-
-    display: flex;
-    flex-direction: column;
-}
-
-.main {
-    flex-grow: 1;
-}
-
-
-
-
 /*#endregion*/
 /** ====================  main  ==================== */
-/*! ===============  section about  ================ */
+/*! ===================  banner  =================== */
 /*#region*/
+.main {
+  padding-inline: 0;
+}
 
+.banner-body {
+  padding-top: 76px;
+  padding-inline: calc(var(--container-padding-x) - 10px);
+  margin-bottom: -35px;
+}
+
+.banner-body-title {
+  font-weight: 600;
+  font-size: min(10.31vw, 198px);
+  line-height: 1;
+  color: var(--color-white);
+  text-transform: uppercase;
+}
+
+.banner-images {
+  position: relative;
+  z-index: 2;
+
+}
+
+.banner-img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.banner-link {
+  position: absolute;
+  z-index: 2;
+  top: calc(-7.25em / 2);
+  left: 50%;
+
+  width: 7.25em;
+  aspect-ratio: 1;
+}
+
+.banner-link path:hover {
+  fill: var(--color-light-gray);
+  transition-duration: var(--transition-duration);
+}
+
+.banner-getstarted {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 2px;
+  text-transform: uppercase;
+}
+
+.banner-getstarted-link {
+  width: 100%;
+  height: 396px;
+  padding: 56px;
+  background-color: var(--color-light);
+}
+
+.banner-getstarted-link:hover {
+  opacity: 0.9;
+}
+
+.banner-getstarted-card h4 {
+  font-family: var(--font-family-second);
+  font-weight: 600;
+  font-size: 20px;
+  font-size: clamp(16px, 1.04vw, 20px);
+  letter-spacing: 0.2em;
+  color: var(--color-orange);
+}
+
+.banner-getstarted-card p {
+  font-family: var(--font-family-first);
+  font-weight: 600;
+  font-size: 42px;
+  font-size: clamp(20px, 2.18vw, 42px);
+  color: var(--color-dark);
+  padding-bottom: 167px;
+}
+
+.banner-getstarted-card--get {
+  display: flex;
+  justify-content: space-between;
+}
+
+.banner-getstarted-card--get p {
+  font-family: var(--font-family-first);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.44;
+  letter-spacing: 0.1em;
+  color: #141414;
+}
 
 /*#endregion*/
-
-
-
-
 
 /*! ===============  @MEDIA  ================ */
 /*#region*/
