@@ -454,12 +454,12 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .banner-getstarted-link {
-    height: clamp(110px, 10.45vw , 220px);
+    height: clamp(100px, 10.45vw , 220px);
     padding: 10px;
   }
 
   .banner-getstarted-card-p {
-    padding-bottom: 45px;
+    padding-bottom: 40px;
   }
 }
 
