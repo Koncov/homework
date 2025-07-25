@@ -415,6 +415,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 660px) {
+  .banner-body {
+    margin-bottom: -15px;
+  }
+
   .banner-getstarted-card-p {
     padding-bottom: 60px;
   }
@@ -444,7 +448,7 @@ h1, h2, h3, h4, h5, h6 {
   .banner-body {
     padding-top: 18px;
     padding-inline: calc(var(--container-padding-x) - 32px);
-    margin-bottom: -15px;
+    margin-bottom: -12px;
   }
 
   .banner-link {
