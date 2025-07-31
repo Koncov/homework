@@ -820,8 +820,28 @@ z-index: -1;
     padding-bottom: 40px;
   }
 
+  .slider-promo-wrapper {
+    padding-left: 20px;
+    padding-right: 50px;
+  }
+
   .slider-promo-slide--image {
-    display: none;
+    position: absolute;
+    opacity: 0.2;
+    max-width: 60%;
+    top: 10%;
+    right: 0;
+    z-index: 6;
+  }
+.slider-promo-slide::before {
+    right: -17;
+    width: 345px;
+    height: 345px;
+    opacity: 0.3;
+  }
+
+  .slider-promo-mySwiper {
+    max-height: 460px;
   }
 }
 
