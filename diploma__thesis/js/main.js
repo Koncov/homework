@@ -4,7 +4,7 @@
   //slider-promo
   const swiper = new Swiper('.slider-promo-mySwiper', {
     loop: true,
-    direction: "vertical",
+    direction: "horizontal",
     pagination: {
       el: ".slider-promo-pagination",
       clickable: true,
@@ -13,6 +13,12 @@
       },
     },
 
+    breakpoints: {
+      // when window width is >= 320px
+      1024: {
+        direction: "vertical",
+      },
+    }
 
   });
 

@@ -312,7 +312,6 @@ h1, h2, h3, h4, h5, h6 {
 .banner-getstarted-card-p {
   font-family: var(--font-family-first);
   font-weight: 600;
-  font-size: 42px;
   font-size: clamp(9px, 2.18vw, 42px);
   color: var(--color-dark);
   padding-bottom: 167px;
@@ -327,7 +326,6 @@ h1, h2, h3, h4, h5, h6 {
 .banner-getstarted-card--get-p {
   font-family: var(--font-family-first);
   font-weight: 700;
-  
   font-size: clamp(7px, 0.8vw, 16px);
   line-height: 1.44;
   letter-spacing: 0.1em;
@@ -345,14 +343,6 @@ h1, h2, h3, h4, h5, h6 {
 /** ====================  main  ==================== */
 /*! ================  slider-promo  ================ */
 /*#region*/
-
-/*#endregion*/
-
-
-.header,
-.banner {
-  display: none;
-}
 
 /* Все точки */
 .swiper-pagination-bullet {
@@ -388,7 +378,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .slider-promo {
   max-width: var(--container-width);
-  border: 1px solid red;
 }
 
 .slider-promo-mySwiper {
@@ -431,7 +420,6 @@ z-index: -1;
 }
 
 .slider-promo-slide--content {
-  width: 100%;
   max-width: 500px;
 }
 
@@ -484,7 +472,6 @@ z-index: -1;
 .slider-promo-slide--image {
   width: 100%;
   position: relative;
-  padding-left: 172px;
   padding-left: clamp(40px, 8.95vw, 172px);
   z-index: 1;
   margin-left: 7%;
@@ -526,8 +513,6 @@ z-index: -1;
 .slider-promo-slide--image-info-2 {
   text-align: center;
   align-content: center;
-
-  height: 142px;
   height: clamp(40px, 7.39vw, 142px);
   background: var(--color-white);
 }
@@ -547,7 +532,6 @@ z-index: -1;
 .slider-promo-slide--image-info-1 p,
 .slider-promo-slide--image-info-2 p {  
   font-family: var(--font-family-second);
-  font-size: 16px;
   font-size:  clamp(10px, 0.83vw, 16px);
   line-height: 169%;
   font-weight: 400;
@@ -558,9 +542,13 @@ z-index: -1;
 .slider-promo-slide--image-info-2 p {  
   color: var(--color-dark);
 }
-
-
-
+/*#endregion*/
+/*
+.header,
+.banner {
+  display: none;
+}
+*/
 /*! ===============  @MEDIA  ================ */
 /*#region*/
 @media (max-width: 1860px) {
@@ -629,6 +617,34 @@ z-index: -1;
   }
 }
 
+@media (max-width: 1023px) {
+
+
+  .slider-promo-wrapper {
+    padding: 50px 70px 90px 70px;
+  }
+
+  .slider-promo-pagination {
+    flex-direction: row;
+    padding-right: 0;
+    margin-bottom: 2%;
+  }
+
+  .slider-promo-slide--image {
+    margin-right: 10%;
+  }
+
+  .slider-promo-slide--image-info {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: -1;
+    bottom: clamp(30px, 17vw, 180px);
+    left: 1%;
+    width: clamp(50px, 9.27vw, 182px);
+  }
+}
+
 @media (max-width: 955px) {
   .header-menu-list {
       column-gap: 20px;
@@ -665,10 +681,6 @@ z-index: -1;
     padding-left: 60px;
   }
 
-  .slider-promo-mySwiper {
-    max-height: 650px;
-  }
-
   .slider-promo-slide::before {
     right: 7%;
     width: 550px;
@@ -702,19 +714,18 @@ z-index: -1;
     font-size: 15px;
   }
 
-  .slider-promo-pagination {
-      gap: 10px;
-      padding-right: 2%;
-  }
-
   .slider-promo-wrapper {
     padding-right: 88px;
+  }
+
+    .slider-promo-slide--image {
+    margin-right: 15%;
   }
 }
 
 @media (max-width: 800px) {
   .slider-promo-mySwiper {
-    max-height: 550px;
+    max-height: 750px;
   }
 
   .slider-promo-slide::before {
@@ -758,10 +769,6 @@ z-index: -1;
     right: 2%;
     width: 400px;
     height: 400px;
-  }
-
-  .slider-promo-slide--content--text-title {
-    padding-bottom: 0px;
   }
 
       /* Все точки */
@@ -822,26 +829,44 @@ z-index: -1;
 
   .slider-promo-wrapper {
     padding-left: 20px;
-    padding-right: 50px;
   }
 
   .slider-promo-slide--image {
     position: absolute;
-    opacity: 0.2;
-    max-width: 60%;
-    top: 10%;
-    right: 0;
+    opacity: 0.4;
+    max-width: 50%;
+    top: 2%;
+    right: -5%;
     z-index: 6;
   }
+  
 .slider-promo-slide::before {
     right: -17;
     width: 345px;
     height: 345px;
-    opacity: 0.4;
+    opacity: 0.3;
   }
 
   .slider-promo-mySwiper {
-    max-height: 460px;
+    max-height: 550px;
+  }
+
+  .slider-promo-slide--content-title-p {
+    color: var(--color-light-gray);
+    text-shadow: 0 0 1px var(--color-white);
+}
+
+  .slider-promo-button {
+    border-left: 3px solid var(--color-white);
+    height: 56px;
+    padding-inline: 41px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  .slider-promo-slide--content {
+    width: 100%;
+    padding-right: 40px;
   }
 }
 
