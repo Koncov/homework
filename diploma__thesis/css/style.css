@@ -107,6 +107,77 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--color-gray);
 }
 
+.card-animation {
+  border-bottom: 2px solid #7c7c7c;
+  position: relative;
+}
+
+.card-animation::before {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  height: 8px;
+  background-color: var(--color-orange);
+  width: 80%; /* Останавливается на 80% ширины */
+  transform: scaleX(0); /* изначально линия скрыта */
+  transform-origin: left;
+}
+
+@keyframes drawLine {
+  to {
+    transform: scaleX(1); /* выезжает слева направо */
+  }
+}
+
+.card-animation:hover.card-animation::before {
+  animation: drawLine 0.3s ease-out forwards;
+}
+
+.card-animation-image {
+  max-width: 380px;
+  max-height: 569px;
+  position: relative;
+}
+
+.card-animation-image::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-orange);
+  opacity: 0;
+  transform: scaleX(0); /* изначально линия скрыта */
+  transform-origin: right;
+}
+
+.card-animation:hover .card-animation-image::before{
+  opacity: 50%;
+  animation: drawLine 0.3s ease-out forwards;
+}
+
+.card-animation-text {
+  display: flex;
+  align-items: center;
+  gap: clamp(5px,0.83vw ,16px);
+  font-family: var(--font-family-second);
+  font-weight: 600;
+  font-size: clamp(6px, 1.04vw, 20px);
+  letter-spacing: 0.2em;
+  color: var(--color-orange);
+  text-transform: uppercase;
+  padding: clamp(10px, 1.56vw, 30px) 0 5px 0;
+}
+
+.card-animation-title {
+  display: ruby-text;
+  font-family: var(--font-family-first);
+  font-weight: 600;
+  font-size: clamp(10px, 2.18vw, 42px);
+  color: var(--color-white);
+}
+
+
 
 /*#endregion*/
 
@@ -707,73 +778,9 @@ z-index: -1;
   gap: clamp(5px, 2.18vw, 42px);
 }
 
-.our-programs-card {
-  padding-bottom: clamp(5px, 1.25vw, 24px);
-  border-bottom: 2px solid #7c7c7c;
-  position: relative;
-}
-
-.our-programs-card::before {
-  content: '';
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  height: 8px;
-  background-color: var(--color-orange);
-  width: 80%; /* Останавливается на 80% ширины */
-  transform: scaleX(0); /* изначально линия скрыта */
-  transform-origin: left;
-}
-
-@keyframes drawLine {
-  to {
-    transform: scaleX(1); /* выезжает слева направо */
-  }
-}
-
-.our-programs-card:hover.our-programs-card::before {
-  animation: drawLine 0.3s ease-out forwards;
-}
-
-.our-programs-card-image{
-  max-width: 380px;
-  max-height: 569px;
-  position: relative;
-}
-
-.our-programs-card-image::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: var(--color-orange);
-  opacity: 0;
-  transform: scaleX(0); /* изначально линия скрыта */
-  transform-origin: right;
-}
-
-.our-programs-card:hover .our-programs-card-image::before{
-  opacity: 50%;
-  animation: drawLine 0.3s ease-out forwards;
-}
-
-
 .our-programs-card-img {
   width: 100%;
   height: 100%;
-}
-
-.our-programs-card-image-text {
-  display: flex;
-  align-items: center;
-  gap: clamp(5px,0.83vw ,16px);
-  font-family: var(--font-family-second);
-  font-weight: 600;
-  font-size: clamp(6px, 1.04vw, 20px);
-  letter-spacing: 0.2em;
-  color: var(--color-orange);
-  text-transform: uppercase;
-  padding: clamp(10px, 1.56vw, 30px) 0 5px 0;
 }
 
 .our-programs-card-image-text span {
@@ -781,13 +788,6 @@ z-index: -1;
   height: clamp(2px, 0.31vw, 6px);
   background-color: var(--color-white);
   border-radius: 50%;
-}
-
-.our-programs-card-image-title {
-  font-family: var(--font-family-first);
-  font-weight: 600;
-  font-size: clamp(10px, 2.18vw, 42px);
-  color: #fff;
 }
 
 /*#endregion*/
@@ -895,7 +895,7 @@ z-index: -1;
     margin: 0 -14px;
   }
 
-.our-programs-card::before {
+.card-animation::before {
   bottom: -4px;
   height: 6px;
   }
@@ -1067,7 +1067,7 @@ z-index: -1;
   border-left: 1px solid var(--color-very-dark);
   }
 
-.our-programs-card::before {
+.card-animation::before {
   bottom: -3px;
   height: 4px;
   }
@@ -1204,12 +1204,12 @@ z-index: -1;
 }
 
 
-/* .header,
+.header,
 .banner,
 .slider-promo,
 .service-promo {
   display: none;
-} */
+}
 
 
 /*#endregion*/
