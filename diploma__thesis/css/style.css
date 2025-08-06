@@ -1165,15 +1165,9 @@ z-index: -1;
   }
 
 .our-programs-text {
-  width: clamp(50px, 8.85vw, 170px);
-  width: 170px;
-  font-family: var(--font-family-second);
-  font-weight: 400;
-  font-size: clamp(7px, 0.83vw, 16px);
-  line-height: 1.69;
-  color: var(--color-light-gray);
-  text-align: center;
-  margin-bottom: clamp(5px, 4.47vw, 86px);
+  width: 220px;
+  font-size: 8px;
+  margin-top: 10px;
   }
 
 .our-programs-title::before {
@@ -1202,6 +1196,10 @@ z-index: -1;
 
 .service-promo-service-bar {
     margin: 0 -5px;
+  }
+
+.our-programs-text {
+  margin-top: 3px;
   }
 }
 
