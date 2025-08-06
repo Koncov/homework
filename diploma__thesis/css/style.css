@@ -232,8 +232,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*#endregion*/
-
-/*#endregion*/
 /** ====================  main  ==================== */
 /*! ===================  banner  =================== */
 /*#region*/
@@ -639,6 +637,161 @@ z-index: -1;
 
 /*#endregion*/
 
+/** ====================  main  ==================== */
+/*! ===============  our-programs  ================= */
+/*#region*/
+.our-programs {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.our-programs::before {
+  content: '';
+  position: absolute;
+  width: clamp(50px, 39.94vw, 767px);
+  aspect-ratio: 1;
+  top: clamp(5px, 6.14vw, 118px);
+  left: clamp(5px, 6.14vw, 118px);
+  background: url(../images/our-programs/bg-our-programs.svg) left/contain no-repeat;
+  z-index: -1;
+}
+
+.our-programs-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: clamp(40px, 63.12vw, 1212px);
+  padding: clamp(15px, 5vw, 96px) 0 clamp(20px, 7.08vw, 136px);
+}
+
+.our-programs-title {
+  font-family: var(--font-family-first);
+  font-weight: 500;
+  font-size: clamp(15px, 3.64vw, 70px);
+  color: var(--color-white);
+  text-transform: uppercase;
+  position: relative;
+}
+
+.our-programs-title::before {
+  content: attr(data);
+  position: absolute;
+  top: -0.53em;
+  right: -3em;
+  color: transparent;
+  -webkit-text-stroke: 2px var(--color-white);
+  opacity: 30%;
+  z-index: -1;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: clamp(20px, 20.67vw, 397px);
+  line-height: 0.98;
+}
+
+.our-programs-text {
+  width: clamp(50px, 24.37vw, 468px);
+  font-family: var(--font-family-second);
+  font-weight: 400;
+  font-size: clamp(6px, 0.83vw, 16px);
+  line-height: 1.69;
+  color: var(--color-light-gray);
+  text-align: center;
+  margin-bottom: clamp(5px, 4.47vw, 86px);
+}
+
+.our-programs-cards {
+  display: flex;
+  gap: clamp(5px, 2.18vw, 42px);
+}
+
+.our-programs-card {
+  padding-bottom: clamp(5px, 1.25vw, 24px);
+  border-bottom: 2px solid #7c7c7c;
+  position: relative;
+}
+
+.our-programs-card::before {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  height: 8px;
+  background-color: var(--color-orange);
+  width: 80%; /* Останавливается на 80% ширины */
+  transform: scaleX(0); /* изначально линия скрыта */
+  transform-origin: left;
+}
+
+@keyframes drawLine {
+  to {
+    transform: scaleX(1); /* выезжает слева направо */
+  }
+}
+
+.our-programs-card:hover.our-programs-card::before {
+  animation: drawLine 0.3s ease-out forwards;
+}
+
+.our-programs-card-image{
+  max-width: 380px;
+  max-height: 569px;
+  position: relative;
+}
+
+.our-programs-card-image::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-orange);
+  opacity: 0;
+  transform: scaleX(0); /* изначально линия скрыта */
+  transform-origin: right;
+}
+
+.our-programs-card:hover .our-programs-card-image::before{
+  opacity: 50%;
+  animation: drawLine 0.3s ease-out forwards;
+}
+
+
+.our-programs-card-img {
+  width: 100%;
+  height: 100%;
+}
+
+.our-programs-card-image-text {
+  display: flex;
+  align-items: center;
+  gap: clamp(5px,0.83vw ,16px);
+  font-family: var(--font-family-second);
+  font-weight: 600;
+  font-size: clamp(6px, 1.04vw, 20px);
+  letter-spacing: 0.2em;
+  color: var(--color-orange);
+  text-transform: uppercase;
+  padding: clamp(10px, 1.56vw, 30px) 0 5px 0;
+}
+
+.our-programs-card-image-text span {
+  width: clamp(2px, 0.31vw, 6px);
+  height: clamp(2px, 0.31vw, 6px);
+  background-color: var(--color-white);
+  border-radius: 50%;
+}
+
+.our-programs-card-image-title {
+  font-family: var(--font-family-first);
+  font-weight: 600;
+  font-size: clamp(10px, 2.18vw, 42px);
+  color: #fff;
+}
+
+/*#endregion*/
+
 /*! ===============  @MEDIA  ================ */
 /*#region*/
 @media (max-width: 1860px) {
@@ -740,6 +893,11 @@ z-index: -1;
 
 .service-promo-service-bar {
     margin: 0 -14px;
+  }
+
+.our-programs-card::before {
+  bottom: -4px;
+  height: 6px;
   }
 }
 
@@ -908,6 +1066,11 @@ z-index: -1;
 .card-about-last {
   border-left: 1px solid var(--color-very-dark);
   }
+
+.our-programs-card::before {
+  bottom: -3px;
+  height: 4px;
+  }
 }
 
 @media (max-width: 510px) {
@@ -1025,7 +1188,8 @@ z-index: -1;
 
 /* .header,
 .banner,
-.slider-promo {
+.slider-promo,
+.service-promo {
   display: none;
 } */
 
