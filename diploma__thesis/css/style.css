@@ -792,6 +792,143 @@ z-index: -1;
 
 /*#endregion*/
 
+/** ====================  main  ==================== */
+/*! ==================  timetable  ================= */
+/*#region*/
+.timetable-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(5px, 1.45vw, 28px);
+  width: 100%;
+  height: clamp(10px, 5.62vw, 108px);
+  background-color: var(--color-orange);
+  transition-duration: var(--transition-duration);
+}
+
+.timetable-link:hover {
+  background-color: var(--color-gray);
+}
+
+.timetable-link p {
+  font-family: var(--font-family-second);
+  font-weight: 700;
+  font-size: clamp(8px, 0.83vw, 16px);
+  line-height: 1.44;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-dark);
+}
+
+.timetable-link svg {
+  width: clamp(15px, 2.34vw, 45px);
+  aspect-ratio: 1;
+}
+
+.timetable-wrapper-images {
+  display: flex;
+  position: relative;
+}
+
+.timetable-wrapper-image {
+  max-width: 960px;
+  height: auto;
+  position: relative;
+}
+
+.timetable-img {
+  width: 100%;
+  height: 100%;
+}
+
+.timetable-wrapper-logo {
+    content: '';
+    width: 13%;
+    aspect-ratio: 1;
+    position: absolute;
+    top: 34.5%;
+    left: 43.5%;
+    background: url(../images/promo/promo-icon.png) center / contain no-repeat;
+    z-index: 10;
+}
+
+.timetable-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.timetable-overlay [class] {
+    z-index: 3;
+}
+
+.timetable-overlay::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-orange);
+  opacity: 50%;
+  z-index: 1;
+}
+
+.timetable-overlay:hover {
+  opacity: 0;
+  transition-duration: var(--transition-duration);
+}
+
+.timetable-overlay-img {
+  width: clamp(10px, 5.18vw, 99.5px);
+  height: auto;
+  margin-bottom: clamp(0px, 2.55vw, 49px);
+}
+
+.timetable-overlay-img img {
+width: 100%;
+height: 100%;
+}
+
+.timetable-overlay-text {
+  font-family: var(--font-family-first);
+  font-weight: 400;
+  font-size: clamp(8px, 2.86vw, 55px);
+  text-align: center;
+  color: var(--color-white);
+  margin-bottom: clamp(0px, 2.18vw, 42px);
+  text-transform: uppercase;
+}
+
+.timetable-overlay hr {
+  width: clamp(20px, 4.32vw, 83px);
+  height: clamp(1px, 0.15vw, 3px);
+  background: var(--color-orange);
+  margin-bottom: clamp(0px, 3.38vw, 65px);
+}
+
+.timetable-overlay-designer {
+  font-family: var(--font-family-second);
+  font-weight: 400;
+  font-size: clamp(8px, 1.04vw, 20px);
+  color: var(--color-white);
+  opacity: 0.7;
+  margin-bottom: clamp(0px, 0.57vw, 11px);
+}
+
+.timetable-overlay-name {
+  font-family: var(--font-family-second);
+  font-weight: 700;
+  font-size: clamp(10px, 1.56vw, 30px);
+  color: var(--color-white);
+}
+/*#endregion*/
+
+
 /*! ===============  @MEDIA  ================ */
 /*#region*/
 @media (max-width: 1860px) {
@@ -1204,12 +1341,13 @@ z-index: -1;
 }
 
 
-.header,
+/* .header,
 .banner,
 .slider-promo,
-.service-promo {
+.service-promo,
+.our-programs {
   display: none;
-}
+} */
 
 
 /*#endregion*/
