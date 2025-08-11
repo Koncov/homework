@@ -1063,6 +1063,13 @@ height: 100%;
 }
 
 /*#endregion*/
+
+/** ====================  main  ==================== */
+/*! =================  promo-about  ================ */
+/*#region*/
+
+/*#endregion*/
+
 /*! ===============  @MEDIA  ================ */
 /*#region*/
 @media (max-width: 1860px) {
@@ -1526,7 +1533,8 @@ height: 100%;
 .slider-promo,
 .service-promo,
 .our-programs,
-.timetable {
+.timetable,
+.briefly-about {
   display: none;
 }
 
