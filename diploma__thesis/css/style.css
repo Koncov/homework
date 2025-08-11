@@ -946,7 +946,6 @@ height: 100%;
   gap: clamp(10px, 16.45vw, 316px);
 }
 
-
 .briefly-about-list {
   display: flex;
   flex-direction: column;
@@ -992,6 +991,11 @@ height: 100%;
 
 .briefly-about-content-wrapper {
   width: 468px;
+  display: none;
+}
+
+.briefly-about-content-wrapper--show {
+  display: block;
 }
 
 .briefly-about-content-title:first-of-type {
@@ -1517,14 +1521,14 @@ height: 100%;
 }
 
 
-/* .header,
+.header,
 .banner,
 .slider-promo,
 .service-promo,
 .our-programs,
 .timetable {
   display: none;
-} */
+}
 
 
 /*#endregion*/
