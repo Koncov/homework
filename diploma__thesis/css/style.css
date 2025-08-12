@@ -1067,7 +1067,110 @@ height: 100%;
 /** ====================  main  ==================== */
 /*! =================  promo-about  ================ */
 /*#region*/
+.promo-about {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-dark-gray);
+}
 
+.promo-about-cards {
+  display: flex;
+}
+
+.promo-about-card {
+  display: flex;
+  justify-content: space-between;
+}
+
+.promo-about-cards:last-of-type .promo-about-card{
+  flex-direction: row-reverse;
+}
+
+.promo-about-card-image,
+.promo-about-card-content {
+  flex: 1 1 150px;
+  aspect-ratio: 1;
+}
+
+.promo-about-card-image {
+  position: relative;
+}
+
+.promo-about-card-image::before {
+  content: '';
+  transition-duration: var(--transition-duration);
+}
+
+.promo-about-card:hover .promo-about-card-image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-orange);
+  opacity: 0.4;
+}
+
+.promo-about-card-img {
+  width: 100%;
+  height: auto;
+}
+
+.promo-about-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(5px, 2.7vw, 52px);
+}
+
+.promo-about-card-logo {
+  font-family: var(--font-family-second);
+  font-weight: 600;
+  font-size: clamp(8px, 1.04vw, 20px);
+  letter-spacing: 0.2em;
+  color: var(--color-orange);
+  padding-bottom: clamp(1px, 0.52vw, 10px);
+  text-transform: uppercase;
+}
+
+.promo-about-card-title {
+  font-family: var(--font-family-first);
+  font-weight: 500;
+  font-size: clamp(10px, 2.18vw, 42px);
+  color: var(--color-white);
+  text-transform: uppercase;
+  padding-bottom: clamp(1px, 0.52vw, 10px);
+}
+
+.promo-about-card-text {
+  font-family: var(--font-family-second);
+  font-weight: 400;
+  font-size: clamp(8px, 0.83vw, 16px);
+  line-height: 1.69;
+  color: var(--color-light-gray);
+  padding-bottom: clamp(5px, 1.56vw, 30px);
+}
+
+.promo-about-card-link {
+  font-family: var(--font-family-second);
+  font-weight: 700;
+  font-size: clamp(8px, 0.83vw, 16px);
+  line-height: 1.44;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+  padding-bottom: clamp(1px, 0.52vw, 10px);
+  position: relative;
+  align-self: flex-start;
+}
+
+.promo-about-card-link::before {
+  content: '';
+  position: absolute;
+  bottom: 5%;
+  left: 0;
+  width: 100%;
+  display: block;
+  border-bottom: 2px solid var(--color-orange);
+}
 /*#endregion*/
 
 /*! ===============  @MEDIA  ================ */
@@ -1376,6 +1479,42 @@ height: 100%;
 
   .briefly-about-content-cards {
     margin-top: clamp(0px, 3.39vw, 238px);
+  }
+
+  .promo-about-card-content {
+    padding: clamp(5px, 4.7vw, 52px);
+  }
+
+  .promo-about-cards {
+    flex-direction: column;
+  }
+
+  .promo-about-card:last-of-type {
+    flex-direction: row-reverse;
+  }
+
+  .promo-about-cards:last-of-type .promo-about-card:first-of-type {
+    flex-direction: row;
+  }
+
+  .promo-about-card-logo {
+    font-size: clamp(8px, 2.44vw, 20px);
+    padding-bottom: clamp(1px, 0.52vw, 10px);
+  }
+
+  .promo-about-card-title {
+    font-size: clamp(10px, 4.18vw, 42px);
+    padding-bottom: clamp(1px, 0.52vw, 10px);
+  }
+
+  .promo-about-card-text {
+    font-size: clamp(8px, 2.83vw, 16px);
+    padding-bottom: clamp(5px, 1.56vw, 30px);
+  }
+
+  .promo-about-card-link {
+    font-size: clamp(8px, 2.83vw, 16px);
+    padding-bottom: clamp(1px, 1.52vw, 10px);
   }
 }
 
