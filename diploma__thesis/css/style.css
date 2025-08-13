@@ -1241,21 +1241,20 @@ height: 100%;
 .classes-timetable-link {
   display: inline-block;
   position: relative;
-  font-family: var(--font-family);
+  font-family: var(--font-family-first);
   font-weight: 500;
   font-size: clamp(10px, 1.56vw, 30px);
   color: var(--color-white);
   white-space: nowrap;
   text-transform: uppercase;
   z-index: 1;
-  
 }
 
 .classes-timetable-link::before {
   content: "";
   position: absolute;
-  top: 8%;
-  left: -0.42em;
+  top: 10%;
+  left: -0.62em;
   z-index: -1;
   width: clamp(10px, 2.18vw, 42px);
   aspect-ratio: 1;
@@ -1272,8 +1271,8 @@ height: 100%;
 .classes-timetable-link.is-current::before {
   content: "";
   position: absolute;
-  top: 8%;
-  left: -0.42em;
+  top: 10%;
+  left: -0.62em;
   opacity: 1;
 }
 
@@ -1293,7 +1292,6 @@ height: 100%;
 .classes-timetable-content-table {
   white-space: nowrap;
   border-collapse: collapse;
-  table-layout: fixed;
   width: 100%;
 }
 
@@ -1303,24 +1301,31 @@ height: 100%;
   font-size: clamp(10px, 1.04vw, 20px);
   text-align: center;
   color: #b5b5b5;
-
+  width: 160px;
+  height: 113px;
 }
 
-.classes-timetable-content-table th {
-  width: 100%;
-  max-width: 154%;
-  max-height: 98px;
+.classes-timetable-content-table :is(th) {
+  height: 99px;
 }
 
-.classes-timetable-content-table td {
-  width: 100%;
-  max-width: 154%;
-  max-height: 113px;
+.cell {
+  width: 154px!important;
 }
 
-.classes-timetable-content-table :is(th, td):not(:last-child) {
-border-right: 1px solid var(--color-gray);
-border-bottom: 1px solid var(--color-gray);
+
+.classes-timetable-content-table :is(th, td):not(:last-child),
+.cell1 {
+  border-right: 1px solid var(--color-gray);
+}
+
+.classes-timetable-content-table :is(td, th) {
+  border-bottom: 1px solid var(--color-gray);
+}
+
+.classes-timetable-content-table :is(tr):last-of-type :is(td) {
+  border-bottom: 0;
+  height: 99px;
 }
 
 
