@@ -1060,6 +1060,7 @@ height: 100%;
   line-height: 1.35;
   color: var(--color-dark);
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 /*#endregion*/
@@ -1084,6 +1085,32 @@ height: 100%;
 
 .promo-about-cards:last-of-type .promo-about-card{
   flex-direction: row-reverse;
+}
+
+.promo-about-card .promo-about-card-content {
+  position: relative;
+}
+
+.promo-about-cards:first-of-type .promo-about-card:first-of-type .promo-about-card-content::before {
+    content: '';
+    position: absolute;
+    width: clamp(1px, 8.33vw, 160px);
+    height: clamp(1px, 20.15vw, 387px);
+    top: clamp(5px, 2.44vw, 47px);
+    left: clamp(5px, 2.44vw, 47px);
+    background: url(../images/promo-about/promo-about-bg1.svg) left / contain no-repeat;
+    z-index: 1;
+}
+
+.promo-about-cards:last-of-type .promo-about-card:last-of-type .promo-about-card-content::before {
+    content: '';
+    position: absolute;
+    width: clamp(1px, 13.28vw, 255px);
+    aspect-ratio: 1;
+    bottom: clamp(5px, 2.44vw, 47px);
+    right: clamp(5px, 2.44vw, 47px);
+    background: url(../images/promo-about/promo-about-bg2.svg) left / contain no-repeat;
+    z-index: 1;
 }
 
 .promo-about-card-image,
@@ -1171,6 +1198,132 @@ height: 100%;
   display: block;
   border-bottom: 2px solid var(--color-orange);
 }
+/*#endregion*/
+
+/** ====================  main  ==================== */
+/*! =============  classes-timetable  ============== */
+/*#region*/
+.classes-timetable {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: clamp(10px, 5.36vw, 103px);
+}
+
+.classes-timetable::before {
+    content: '';
+    position: absolute;
+    width: clamp(1px, 8.80vw, 169px);
+    height: clamp(1px, 59.68vw, 1146px);
+    top: clamp(5px, 2.44vw, 47px);
+    right: clamp(5px, 2.44vw, 47px);
+    background: url(../images/classes-timetable/classes-timetable-bg.svg) left / contain no-repeat;
+    z-index: -1;
+}
+
+.classes-timetable-title {
+  font-family: var(--font-family-first);
+  font-weight: 500;
+  font-size: clamp(10px, 3.64vw, 103px);
+  color: var(--color-white);
+  padding-bottom: clamp(1px, 3.48vw, 67px);
+  text-transform: uppercase;
+}
+
+.classes-timetable-list {
+  display: flex;
+  gap: clamp(10px, 4.32vw, 83px);
+  padding-bottom: clamp(1px, 3.17vw, 62px);
+}
+
+.classes-timetable-link {
+  display: inline-block;
+  position: relative;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: clamp(10px, 1.56vw, 30px);
+  color: var(--color-white);
+  white-space: nowrap;
+  text-transform: uppercase;
+  z-index: 1;
+  
+}
+
+.classes-timetable-link::before {
+  content: "";
+  position: absolute;
+  top: 8%;
+  left: -0.42em;
+  z-index: -1;
+  width: clamp(10px, 2.18vw, 42px);
+  aspect-ratio: 1;
+  background-color: var(--color-orange);
+  border-radius: 50%;
+  transition-duration: var(--transition-duration);
+  opacity: 0;
+}
+
+.classes-timetable-link:hover::before {
+    opacity: 1;
+}
+
+.classes-timetable-link.is-current::before {
+  content: "";
+  position: absolute;
+  top: 8%;
+  left: -0.42em;
+  opacity: 1;
+}
+
+.classes-timetable-content {
+  width: 100%;
+  max-width: 1268px;
+}
+
+.classes-timetable-content-wrapper {
+  display: none;
+}
+
+.classes-timetable-content-wrapper--show {
+  display: flex;
+}
+
+.classes-timetable-content-table {
+  white-space: nowrap;
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.classes-timetable-content-table :is(th, td) {
+  font-family: var(--font-family-first);
+  font-weight: 400;
+  font-size: clamp(10px, 1.04vw, 20px);
+  text-align: center;
+  color: #b5b5b5;
+
+}
+
+.classes-timetable-content-table th {
+  width: 100%;
+  max-width: 154%;
+  max-height: 98px;
+}
+
+.classes-timetable-content-table td {
+  width: 100%;
+  max-width: 154%;
+  max-height: 113px;
+}
+
+.classes-timetable-content-table :is(th, td):not(:last-child) {
+border-right: 1px solid var(--color-gray);
+border-bottom: 1px solid var(--color-gray);
+}
+
+
 /*#endregion*/
 
 /*! ===============  @MEDIA  ================ */
@@ -1489,6 +1642,15 @@ height: 100%;
     flex-direction: column;
   }
 
+  .promo-about-cards:first-of-type .promo-about-card:first-of-type .promo-about-card-content::before {
+    width: clamp(1px, 18.13vw, 160px);
+    height: clamp(1px, 44.95vw, 387px);
+}
+
+.promo-about-cards:last-of-type .promo-about-card:last-of-type .promo-about-card-content::before {
+    width: clamp(1px, 24.29vw, 236px);
+}
+
   .promo-about-card:last-of-type {
     flex-direction: row-reverse;
   }
@@ -1667,15 +1829,16 @@ height: 100%;
 }
 
 
-/* .header,
+.header,
 .banner,
 .slider-promo,
 .service-promo,
 .our-programs,
 .timetable,
-.briefly-about {
+.briefly-about,
+.promo-about {
   display: none;
-} */
+}
 
 
 /*#endregion*/
