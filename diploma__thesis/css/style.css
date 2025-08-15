@@ -1287,7 +1287,6 @@ height: 100%;
 .classes-timetable-content {
   max-width: 1268px;
   min-width: 968px;
-  border: 1px solid red;
 }
 
 .classes-timetable-content-wrapper {
@@ -1469,7 +1468,6 @@ height: 100%;
 
   .classes-timetable-content-table :is(th, td) {
     width: 80px;
-    /* width: clamp(1px, 8.33vw, 160px); */
     height: 60px;
   }
 
@@ -1484,7 +1482,6 @@ height: 100%;
   .classes-timetable-content-table :is(tr):last-of-type :is(td) {
     height: 50px;
   }
-
 }
 
 @media (max-width: 955px) {
@@ -1725,6 +1722,23 @@ height: 100%;
   .promo-about-card-link {
     font-size: clamp(8px, 2.83vw, 16px);
     padding-bottom: clamp(1px, 1.52vw, 10px);
+  }
+
+  .classes-timetable-content-table :is(th, td) {
+    width: 60px;
+    height: 55px;
+  }
+
+  .classes-timetable-content-table :is(th) {
+    height: 40px;
+  }
+
+  .cell {
+    width: 55px!important;
+  }
+
+  .classes-timetable-content-table :is(tr):last-of-type :is(td) {
+    height: 40px;
   }
 }
 
