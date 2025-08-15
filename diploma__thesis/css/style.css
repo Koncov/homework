@@ -1218,8 +1218,9 @@ height: 100%;
     width: clamp(1px, 8.80vw, 169px);
     height: clamp(1px, 59.68vw, 1146px);
     top: clamp(5px, 2.44vw, 47px);
+    bottom: -47px;
     right: clamp(5px, 2.44vw, 47px);
-    background: url(../images/classes-timetable/classes-timetable-bg.svg) left / contain no-repeat;
+    background: url('../images/classes-timetable/classes-timetable-bg.svg') left / contain no-repeat;
     z-index: -1;
 }
 
@@ -1276,9 +1277,17 @@ height: 100%;
   opacity: 1;
 }
 
-.classes-timetable-content {
+.classes-timetable-wrapper {
   width: 100%;
+  overflow-x: auto; /* Горизонтальная прокрутка при необходимости */
+  border: 1px solid #ccc;
+  white-space: nowrap; /* Чтобы контент не переносился */
+}
+
+.classes-timetable-content {
   max-width: 1268px;
+  min-width: 968px;
+  border: 1px solid red;
 }
 
 .classes-timetable-content-wrapper {
@@ -1302,6 +1311,7 @@ height: 100%;
   text-align: center;
   color: #b5b5b5;
   width: 160px;
+  /* width: clamp(1px, 8.33vw, 160px); */
   height: 113px;
 }
 
@@ -1350,6 +1360,11 @@ height: 100%;
 
 .service-promo-service-bar {
     margin: 0 -21px;
+  }
+
+.classes-timetable::before {
+  width: clamp(1px, 9.8vw, 169px);
+  height: clamp(1px, 67.68vw, 1146px);
   }
 }
 
@@ -1401,6 +1416,11 @@ height: 100%;
     width: 650px;
     height: 650px;
   }
+
+.classes-timetable::before {
+    width: clamp(1px, 7.8vw, 169px);
+    height: clamp(1px, 55.68vw, 1146px);
+  }
 }
 
 @media (max-width: 1023px) {
@@ -1442,6 +1462,29 @@ height: 100%;
   .briefly-about-wrapper {
     gap: clamp(10px, 8.45vw, 316px);
   }
+
+.classes-timetable::before {
+    background: none;
+  }
+
+  .classes-timetable-content-table :is(th, td) {
+    width: 80px;
+    /* width: clamp(1px, 8.33vw, 160px); */
+    height: 60px;
+  }
+
+  .classes-timetable-content-table :is(th) {
+    height: 50px;
+  }
+
+  .cell {
+    width: 65px!important;
+  }
+
+  .classes-timetable-content-table :is(tr):last-of-type :is(td) {
+    height: 50px;
+  }
+
 }
 
 @media (max-width: 955px) {
