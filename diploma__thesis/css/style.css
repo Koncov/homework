@@ -1889,9 +1889,9 @@ height: 100%;
     width: 230px;
   }
 }
+/*#endregion*/
 
-
-.header,
+/* .header,
 .banner,
 .slider-promo,
 .service-promo,
@@ -1900,11 +1900,7 @@ height: 100%;
 .briefly-about,
 .promo-about {
   display: none;
-}
-
-
-/*#endregion*/
-
+} */
 
 
 /* ===============  Temp
