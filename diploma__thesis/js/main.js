@@ -81,4 +81,44 @@
     }
   })
 
+
+  // accordion
+  const accordionLists = document.querySelectorAll('.accordion-list')
+
+  accordionLists.forEach(el => {
+    el.addEventListener('click', (event) => {
+      const accordionControl = event.target.closest('.accordion-list__control')
+      if (!accordionControl) return
+
+      const accordionItem = accordionControl.parentElement
+      const accordionContent = accordionControl.nextElementSibling
+      const currentTitle = accordionControl.querySelector('.menu-link')
+
+      // Сначала убираем у всех h3 класс is-current
+      el.querySelectorAll('.menu-link').forEach(h3 => {
+        h3.classList.remove('is-current')
+      })
+
+      // Закрываем все открытые элементы внутри этого списка
+      el.querySelectorAll('.accordion-list__item').forEach(item => {
+        if (item !== accordionItem) {
+          item.classList.remove('accordion-list__item--opened')
+          item.querySelector('.accordion-list__content').style.maxHeight = null
+        }
+      })
+
+      // Переключаем текущий
+      accordionItem.classList.toggle('accordion-list__item--opened')
+
+      if (accordionItem.classList.contains('accordion-list__item--opened')) {
+        accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px'
+        currentTitle.classList.add('is-current') // 🔥 добавляем кружок
+      } else {
+        accordionContent.style.maxHeight = null
+        currentTitle.classList.remove('is-current')
+      }
+    })
+  })
+
+
 })()

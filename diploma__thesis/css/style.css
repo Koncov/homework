@@ -52,7 +52,7 @@ body {
     font-family: var(--font-family-second);
     color: var(--color-light-gray);
     background-color: var(--color-dark);
-    font-size: 16px;
+    font-size: clamp(8px, 0.83vw, 16px);
     font-weight: 400;
     line-height: 1.69;
 }
@@ -105,6 +105,45 @@ h1, h2, h3, h4, h5, h6 {
 
 .button:hover {
     background-color: var(--color-gray);
+}
+
+.menu-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 600;
+    height: 30px;
+    z-index: 1;
+}
+
+.menu-link::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: -14px;
+    z-index: -1;
+    width: 40px;
+    aspect-ratio: 1;
+    background-color: var(--color-orange);
+    border-radius: 50%;
+    transition-duration: var(--transition-duration);
+    opacity: 0;
+}
+
+.menu-link:hover::before {
+    opacity: 1;
+}
+
+.menu-link.is-current::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: -14px;
+    z-index: -1;
+    opacity: 1;
 }
 
 .card-animation {
@@ -211,7 +250,6 @@ h1, h2, h3, h4, h5, h6 {
 /** ====================  header  ==================== */
 /*#region*/
 
-
 .header {
     position: relative;
     display: flex;
@@ -239,45 +277,6 @@ h1, h2, h3, h4, h5, h6 {
     column-gap: 50px;
     padding-top: 8px;
     white-space: nowrap;
-}
-
-.header-menu-link {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 22px;
-    font-weight: 600;
-    height: 30px;
-    z-index: 1;
-}
-
-.header-menu-link::before {
-    content: "";
-    position: absolute;
-    top: -6px;
-    left: -14px;
-    z-index: -1;
-    width: 40px;
-    aspect-ratio: 1;
-    background-color: var(--color-orange);
-    border-radius: 50%;
-    transition-duration: var(--transition-duration);
-    opacity: 0;
-}
-
-.header-menu-link:hover::before {
-    opacity: 1;
-}
-
-.header-menu-link.is-current::before {
-    content: "";
-    position: absolute;
-    top: -6px;
-    left: -14px;
-    z-index: -1;
-    opacity: 1;
 }
 
 .header-actions {
@@ -950,40 +949,21 @@ height: 100%;
 }
 
 .briefly-about-link {
-  position: relative;
-  display: inline-flex;
-  text-transform: uppercase;
   font-family: var(--font-family-first);
-  font-weight: 600;
   font-size: clamp(10px, 5.2vw, 100px);
   color: var(--color-dark);
-  z-index: 1;
+  padding-bottom: clamp(20px, 7.91vw, 152px);
 }
 
 .briefly-about-link::before {
-  content: "";
-  position: absolute;
-  top: 9%;
+  top: -41%;
   left: -0.63em;
-  z-index: -1;
   width: clamp(15px, 7.55vw, 145px);
-  aspect-ratio: 1;
-  background-color: var(--color-orange);
-  border-radius: 50%;
-  transition-duration: var(--transition-duration);
-  opacity: 0;
-}
-
-.briefly-about-link:hover::before {
-    opacity: 1;
 }
 
 .briefly-about-link.is-current::before {
-  content: "";
-  position: absolute;
-  top: 9%;
+  top: -41%;
   left: -0.63em;
-  opacity: 1;
 }
 
 .briefly-about-content-wrapper {
@@ -993,10 +973,6 @@ height: 100%;
 
 .briefly-about-content-wrapper--show {
   display: block;
-}
-
-.briefly-about-content-title:first-of-type {
-  margin-top: clamp(5px, 2.08vw, 40px);
 }
 
 .briefly-about-content-title {
@@ -1238,45 +1214,26 @@ height: 100%;
 
 .classes-timetable-link {
   display: inline-block;
-  position: relative;
   font-family: var(--font-family-first);
   font-weight: 500;
   font-size: clamp(10px, 1.56vw, 30px);
   color: var(--color-white);
-  white-space: nowrap;
-  text-transform: uppercase;
-  z-index: 1;
 }
 
 .classes-timetable-link::before {
-  content: "";
-  position: absolute;
   top: 10%;
   left: -0.62em;
-  z-index: -1;
   width: clamp(10px, 2.18vw, 42px);
-  aspect-ratio: 1;
-  background-color: var(--color-orange);
-  border-radius: 50%;
-  transition-duration: var(--transition-duration);
-  opacity: 0;
-}
-
-.classes-timetable-link:hover::before {
-    opacity: 1;
 }
 
 .classes-timetable-link.is-current::before {
-  content: "";
-  position: absolute;
   top: 10%;
   left: -0.62em;
-  opacity: 1;
 }
 
 .classes-timetable-wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   width: 100%;
   overflow-x: auto;
   white-space: nowrap;
@@ -1339,7 +1296,7 @@ height: 100%;
 /*#endregion*/
 
 /** ====================  main  ==================== */
-/*! =============  timetable-video  ============== */
+/*! ==============  timetable-video  =============== */
 /*#region*/
 .timetable-video-image {
   position: relative;
@@ -1378,11 +1335,163 @@ height: 100%;
 }
 /*#endregion*/
 
+/** ====================  main  ==================== */
+/*! =============  location-centers  ============== */
+/*#region*/
+.location-centers {
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-light);
+  padding: clamp(10px, 7.91vw, 152px) 10px clamp(15px, 11.04vw, 212px);
+}
+
+.location-centers-wrapper {
+  width: 100%;
+  max-width: 1210px;
+}
+
+.location-centers-swiper h2 {
+  font-family: var(--font-family-first);
+  font-weight: 500;
+  font-size: clamp(15px, 3.64vw, 70px);
+  color: var(--color-dark);
+  margin-bottom: clamp(10px, 3.17vw, 62px);
+}
+
+.accordion-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion-list__item {
+  border-top: 1px solid var(--color-dark);
+}
+
+.accordion-list__item:last-child {
+  border-bottom: 1px solid var(--color-dark);
+}
+
+.accordion-list__control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-right: 6px;
+  cursor: pointer;
+  background: transparent;
+  height: 88px;
+  max-height: clamp(9px, 4.58vw, 88px);
+  transition-duration: var(--transition-duration);
+}
+
+.accordion-list__control-title {
+  display: flex;
+  align-items: center;
+  gap: clamp(15px, 5.78vw, 111px);
+
+}
+
+.accordion-list__control-title span {
+  font-family: var(--font-family-first);
+  font-weight: 400;
+  font-size: clamp(9px, 1.04vw, 20px);
+  color: var(--color-dark);
+}
+
+.accordion-list__control-title h3 {
+  display: flex;
+  text-transform: none;
+  font-family: var(--font-family-second);
+  font-weight: 700;
+  font-size: clamp(12px, 1.56vw, 30px);
+  line-height: 90%;
+  color: var(--color-dark);
+  position: relative;
+}
+
+.accordion-list__control-title h3::before {
+  content: "";
+  position: absolute;
+  top: -1rem;
+  left: -1.5em;
+  z-index: -1;
+  width: clamp(20px, 3.07vw, 59px);
+  aspect-ratio: 1;
+  opacity: 0;
+}
+
+.accordion-list__control:hover .accordion-list__control-title h3::before {
+  opacity: 1;
+  top: -1rem;
+  left: -1.5em;
+}
+
+
+.accordion-list__control-title h3.is-current::before {
+  opacity: 1; 
+  top: -1rem;
+  left: -1.5em;
+}
+
+.accordion-list__control-icon {
+  transition: var(--transition-duration);
+}
+
+.accordion-list__control-icon svg {
+  width: clamp(8px, 1.56vw, 30px);
+  aspect-ratio: 1;
+}
+
+.accordion-list__item--opened .accordion-list__control-icon {
+  transform: rotate(90deg);
+}
+
+.accordion-list__content {
+  max-height: 0px;
+  overflow: hidden;
+  transition: var(--transition-duration);
+  padding-left: clamp(10px, 1.04vw, 20px);
+  color: var(--color-dark-gray);
+}
+
+.accordion-content-address-card {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--color-white);
+  border-radius: 5px;
+  box-shadow: 0 0 2px rgba(0,0,0,.35);;
+  border: 1px solid rgba(255,255,255,.06);
+  padding: clamp(5px, 1.04vw, 20px);
+  margin-bottom: 3px;
+}
+
+.accordion-content-address-icon-map {
+  display: flex;
+}
+
+.accordion-content-address-icon-map svg {
+  width: clamp(10px, 1.04vw, 20px);
+}
+
+/*#endregion*/
+
 /*! ===============  @MEDIA  ================ */
 /*#region*/
 @media (max-width: 1860px) {
   .slider-promo-pagination {
     padding-right: 3%;
+  }
+
+.accordion-list__control:hover .accordion-list__control-title h3::before {
+  opacity: 0;
+}
+
+
+.accordion-list__control-title h3.is-current::before {
+  top: -1rem;
+  left: -1.5em;
+  opacity: 0;
   }
 }
 
@@ -1963,7 +2072,8 @@ height: 100%;
 .timetable,
 .briefly-about,
 .promo-about,
-.classes-timetable {
+.classes-timetable,
+.timetable-video {
   display: none;
 } */
 
