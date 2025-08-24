@@ -146,6 +146,67 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 1;
 }
 
+.card-programs {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-programs::before {
+  content: '';
+  position: absolute;
+  width: clamp(50px, 39.94vw, 767px);
+  aspect-ratio: 1;
+  top: clamp(5px, 6.14vw, 118px);
+  left: clamp(5px, 6.14vw, 118px);
+  background: url(../images/our-programs/bg-our-programs.svg) left/contain no-repeat;
+  z-index: -1;
+}
+
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: clamp(15px, 5vw, 96px) 0 clamp(20px, 7.08vw, 136px);
+}
+
+.card-title {
+  font-family: var(--font-family-first);
+  font-weight: 500;
+  font-size: clamp(15px, 3.64vw, 70px);
+  color: var(--color-white);
+  text-transform: uppercase;
+  position: relative;
+}
+
+.card-title::before {
+  content: attr(data-text);
+  position: absolute;
+  top: -0.53em;
+  right: -3em;
+  color: transparent;
+  -webkit-text-stroke: clamp(1px, 0.1vw ,2px) var(--color-white);
+  opacity: 30%;
+  z-index: -1;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: clamp(20px, 20.67vw, 397px);
+  line-height: 0.98;
+}
+
+.card-text {
+  width: clamp(50px, 24.37vw, 468px);
+  font-family: var(--font-family-second);
+  font-weight: 400;
+  font-size: clamp(6px, 0.83vw, 16px);
+  line-height: 1.69;
+  color: var(--color-light-gray);
+  text-align: center;
+  margin-bottom: clamp(5px, 4.47vw, 86px);
+}
+
 .card-animation {
   border-bottom: 2px solid #7c7c7c;
   position: relative;
@@ -171,6 +232,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .card-animation:hover.card-animation::before {
   animation: drawLine 0.3s ease-out forwards;
+}
+
+
+.card-animation-img {
+  width: 100%;
+  height: 100%;
 }
 
 .card-animation-image {
@@ -205,15 +272,24 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.2em;
   color: var(--color-orange);
   text-transform: uppercase;
-  padding: clamp(10px, 1.56vw, 30px) 0 5px 0;
+  padding-top: clamp(10px, 1.56vw, 30px);
+}
+
+.card-animation-text span {
+  width: clamp(2px, 0.31vw, 6px);
+  height: clamp(2px, 0.31vw, 6px);
+  background-color: var(--color-white);
+  border-radius: 50%;
 }
 
 .card-animation-title {
-  display: ruby-text;
+  display: inline-flex;
   font-family: var(--font-family-first);
   font-weight: 600;
   font-size: clamp(10px, 2.18vw, 42px);
   color: var(--color-white);
+  margin-top: -7px;
+  padding-bottom: clamp(5px, 1.51vw, 29px);
 }
 
 .get-link {
@@ -737,83 +813,9 @@ z-index: -1;
 /** ====================  main  ==================== */
 /*! ===============  our-programs  ================= */
 /*#region*/
-.our-programs {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.our-programs::before {
-  content: '';
-  position: absolute;
-  width: clamp(50px, 39.94vw, 767px);
-  aspect-ratio: 1;
-  top: clamp(5px, 6.14vw, 118px);
-  left: clamp(5px, 6.14vw, 118px);
-  background: url(../images/our-programs/bg-our-programs.svg) left/contain no-repeat;
-  z-index: -1;
-}
-
-.our-programs-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  width: clamp(40px, 63.12vw, 1212px);
-  padding: clamp(15px, 5vw, 96px) 0 clamp(20px, 7.08vw, 136px);
-}
-
-.our-programs-title {
-  font-family: var(--font-family-first);
-  font-weight: 500;
-  font-size: clamp(15px, 3.64vw, 70px);
-  color: var(--color-white);
-  text-transform: uppercase;
-  position: relative;
-}
-
-.our-programs-title::before {
-  content: attr(data-text);
-  position: absolute;
-  top: -0.53em;
-  right: -3em;
-  color: transparent;
-  -webkit-text-stroke: 2px var(--color-white);
-  opacity: 30%;
-  z-index: -1;
-  font-family: var(--font-family);
-  font-weight: 600;
-  font-size: clamp(20px, 20.67vw, 397px);
-  line-height: 0.98;
-}
-
-.our-programs-text {
-  width: clamp(50px, 24.37vw, 468px);
-  font-family: var(--font-family-second);
-  font-weight: 400;
-  font-size: clamp(6px, 0.83vw, 16px);
-  line-height: 1.69;
-  color: var(--color-light-gray);
-  text-align: center;
-  margin-bottom: clamp(5px, 4.47vw, 86px);
-}
-
 .our-programs-cards {
   display: flex;
   gap: clamp(5px, 2.18vw, 42px);
-}
-
-.our-programs-card-img {
-  width: 100%;
-  height: 100%;
-}
-
-.our-programs-card-image-text span {
-  width: clamp(2px, 0.31vw, 6px);
-  height: clamp(2px, 0.31vw, 6px);
-  background-color: var(--color-white);
-  border-radius: 50%;
 }
 
 /*#endregion*/
@@ -1380,7 +1382,7 @@ height: 100%;
   cursor: pointer;
   background: transparent;
   height: 88px;
-  max-height: clamp(9px, 4.58vw, 88px);
+  max-height: clamp(30px, 4.58vw, 88px);
   transition-duration: var(--transition-duration);
 }
 
@@ -1462,7 +1464,7 @@ height: 100%;
   border-radius: 5px;
   box-shadow: 0 0 2px rgba(0,0,0,.35);;
   border: 1px solid rgba(255,255,255,.06);
-  padding: clamp(5px, 1.04vw, 20px);
+  padding: clamp(1px, 0.74vw, 20px);
   margin-bottom: 3px;
 }
 
@@ -1472,6 +1474,36 @@ height: 100%;
 
 .accordion-content-address-icon-map svg {
   width: clamp(10px, 1.04vw, 20px);
+}
+
+/*#endregion*/
+
+/** ====================  main  ==================== */
+/*! =========  presentation-professionals ========== */
+/*#region*/
+.presentation-professionals-wrapper {
+  padding: clamp(15px, 5.36vw, 103px) 5px clamp(20px, 7.6vw, 146px);
+}
+
+.presentation-professionals-cards {
+  display: flex;
+  gap: clamp(5px, 2.34vw, 45px);
+}
+
+.presentation-professionals-card-image {
+    max-width: 393px;
+    max-height: 488px;
+    position: relative;
+}
+
+.presentation-professionals-title:before {
+    top: -0.49em;
+    right: 0.792em;
+}
+
+.presentation-professionals::before {
+    top: 25em;
+    left: 60%;
 }
 
 /*#endregion*/
@@ -2061,11 +2093,15 @@ height: 100%;
   .briefly-about-content-wrapper {
     width: 230px;
   }
+
+.presentation-professionals-title:before {
+  right: 0.93em;
+  }
 }
 /*#endregion*/
 
-/* .header,
-.banner,
+.header,
+/* .banner,
 .slider-promo,
 .service-promo,
 .our-programs,
@@ -2073,7 +2109,8 @@ height: 100%;
 .briefly-about,
 .promo-about,
 .classes-timetable,
-.timetable-video {
+.timetable-video,
+.location-centers {
   display: none;
 } */
 
