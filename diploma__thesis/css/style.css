@@ -1548,6 +1548,7 @@ height: 100%;
   width: clamp(20px, 11.04vw, 212px);
   height: clamp(15px, 3.95vw, 76px);
   font-size: clamp(10px, 1.04vw, 20px);
+  border-left: clamp(2px, .20vw, 4px) solid var(--color-dark);
 }
 
 .last-blog-content {
