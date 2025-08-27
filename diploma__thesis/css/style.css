@@ -1709,7 +1709,7 @@ height: 100%;
 .footer-about {
   font-family: var(--font-family-second);
   font-weight: 400;
-  font-size: clamp(8px, 1.04vw, 20px);
+  font-size: clamp(10px, 1.04vw, 20px);
   color: #a6a6a6;
 }
 
@@ -1730,7 +1730,7 @@ height: 100%;
 
   font-family: var(--font-family-second);
   font-weight: 500;
-  font-size: clamp(8px, 0.83vw, 16px);
+  font-size: clamp(9px, 0.83vw, 16px);
   line-height: 1.94;
   font-weight: 700;
   color: #ffffff99;
@@ -2396,6 +2396,14 @@ height: 100%;
 
   .last-blog {
     padding:  5px 0;
+  }
+
+  .footer-content {
+    justify-content: space-around;
+  }
+
+  .footer-content h3 {
+    font-size: clamp(11px, 1.04vw, 20px);
   }
 }
 /*#endregion*/
