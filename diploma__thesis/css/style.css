@@ -321,6 +321,96 @@ h1, h2, h3, h4, h5, h6 {
 }
 /*#endregion*/
 
+/** ====================  modal  ==================== */
+/*#region*/
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.849);
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.1s ease;
+}
+
+.modal.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal-content {
+  position: relative;
+  background: var(--color-light);
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  transform: translateY(-100vh);   /* уезжает вверх за экран */
+  transition: transform 0.6s ease;
+  overflow: hidden;
+}
+
+.modal-content::before {
+  content: '';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../images/icon/logo-footer.png');
+  position: absolute;
+  top: -20%;
+  left: -15%;
+  width: 120%;
+  aspect-ratio: 1;
+  z-index: 1000;
+  opacity: 0.1;
+  transform: rotate(30deg) ;
+}
+
+.modal.active .modal-content {
+  transform: translateY(0); /* возвращается в центр */
+}
+
+.modal-content nav {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.modal-content nav a {
+  text-transform: uppercase;
+  font-size: clamp(20px, 1.56vw, 30px);
+  font-weight: 700;
+  color: var(--color-very-dark);
+  z-index: 1010;
+}
+
+.modal-content nav a:hover {
+  color: var(--color-orange);
+}
+
+.close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-white);
+  border: 1px solid var(--color-white);
+  border-radius: 100%;
+  width: 3rem;
+  aspect-ratio: 1;
+  background-color: var(--color-orange);
+  z-index: 1010;
+}
+/*#endregion*/
+
+
 /** ====================  header  ==================== */
 /*#region*/
 
@@ -402,122 +492,6 @@ h1, h2, h3, h4, h5, h6 {
     background-color: transparent;
 }
 
-/*#endregion*/
-
-/** ====================  main  ==================== */
-/*! ====================  modal  =================== */
-/*#region*/
-/* .burger {
-  position: fixed;
-  top: 1rem;
-  left: 1rem;
-  z-index: 1001;
-  font-size: 2rem;
-  background: var(--color-light);
-  border: none;
-  cursor: pointer;
-} */
-
-/* .modal {
-  position: fixed;
-  inset: 0;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.76);
-  z-index: 1000;
-}
-
-.modal.active {
-  display: flex;
-}
-
-.modal-content {
-  background: var(--color-light);
-  padding: 2rem;
-  border-radius: 1rem;
-  width: 80%;
-  max-width: 320px;
-  text-align: center;
-  position: relative;
-}
-
-.modal-content nav {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.modal-content nav a {
-  text-transform: uppercase;
-  font-size: clamp(15px, 1.25vw, 24px);
-  font-weight: 700;
-  color: var(--color-very-dark);
-}
-
-.modal-content nav a:hover {
-  color: var(--color-orange);
-}
-
-.close {
-  position: absolute;
-  top: 0.3rem;
-  right: 1rem;
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-} */
-
-.modal {
-      position: fixed;
-      inset: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: rgba(0,0,0,0.5);
-      z-index: 1000;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.4s ease;
-    }
-
-    .modal.active {
-      opacity: 1;
-      pointer-events: all;
-    }
-
-    .modal-content {
-      position: relative;
-      background: #fff;
-      padding: 2rem;
-      border-radius: 1rem;
-      width: 80%;
-      max-width: 320px;
-      text-align: center;
-      transform: translateY(-100vh); /* уезжает вверх за экран */
-      transition: transform 0.5s ease;
-    }
-
-    .modal.active .modal-content {
-      transform: translateY(0); /* возвращается в центр */
-    }
-
-    .modal-content nav {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .close {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      font-size: 1.5rem;
-      background: none;
-      border: none;
-      cursor: pointer;
-    }
 /*#endregion*/
 
 /** ====================  main  ==================== */
@@ -1725,6 +1699,7 @@ height: 100%;
 /*#region*/
 .footer {
   background: var(--color-dark);
+  padding-inline: 0;
   }
 
 .footer-wrapper {
@@ -1840,7 +1815,8 @@ height: 100%;
 
 
 .footer-copyright {
-  align-content: center;
+  display: flex;
+  align-items: center;
   padding-left: clamp(20px, 5.78vw, 111px);
   background: var(--color-dark-gray);
   height: clamp(20px, 4.58vw, 88px);
@@ -2010,6 +1986,11 @@ height: 100%;
 }
 
 @media (max-width: 955px) {
+
+  .header-menu {
+    display: none;
+  }
+
   .header-menu-list {
       column-gap: 20px;
       flex-wrap: wrap;
