@@ -1,6 +1,50 @@
 (function () {
 
 
+  //modal
+  //Определяем ширину скроллбара
+  function getScrollbarWidth() {
+    return window.innerWidth - document.documentElement.clientWidth;
+  }
+
+  //Отключаем скролл и фиксируем контент
+  function lockBodyScroll() {
+    const scrollBarWidth = getScrollbarWidth();
+    document.body.style.overflow = 'hidden';
+    document.body.style.paddingRight = scrollBarWidth + 'px';
+  }
+
+  function unlockBodyScroll() {
+    document.body.style.overflow = '';
+    document.body.style.paddingRight = '';
+  }
+
+  //логика открытия/закрытия
+  const burgerBtn = document.getElementById('burgerBtn');
+  const closeBtn = document.getElementById('closeBtn');
+  const menuModal = document.getElementById('menuModal');
+
+  burgerBtn.addEventListener('click', () => {
+    menuModal.classList.add('active');
+    lockBodyScroll();
+  });
+
+  closeBtn.addEventListener('click', () => {
+    menuModal.classList.remove('active');
+    unlockBodyScroll();
+  });
+
+  // закрытие по клику вне меню
+  menuModal.addEventListener('click', (e) => {
+    if (e.target === menuModal) {
+      menuModal.classList.remove('active');
+      unlockBodyScroll();
+    }
+  });
+
+
+
+
   //slider-promo
   const swiper = new Swiper('.slider-promo-mySwiper', {
     loop: true,
@@ -20,6 +64,9 @@
       },
     }
   });
+
+
+
 
   // tabs section - briefly-about
   //
@@ -51,6 +98,9 @@
     }
   })
 
+
+
+
   // tabs section - classes-timetable
   //
   const tabControlsCT = document.querySelector('.classes-timetable-list')
@@ -81,6 +131,7 @@
     }
   })
 
+  
 
   // accordion
   const accordionLists = document.querySelectorAll('.accordion-list')

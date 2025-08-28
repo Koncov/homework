@@ -12,6 +12,19 @@
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
+  <div class="modal" id="menuModal">
+    <div class="modal-content">
+      <button class="close" id="closeBtn">✕</button>
+      <nav>
+        <a href="#">HOME</a>
+        <a href="#">CATALOGS</a>
+        <a href="#">BLOG</a>
+        <a href="#">COLLECTIONS</a>
+        <a href="#">CONTACT US</a>
+      </nav>
+    </div>
+  </div>
+
 <body>
   <header class="header container">
     <a href="#" class="header-logo">
@@ -63,7 +76,7 @@
             fill="white" />
         </svg>
       </button>
-      <button class="header-button  button" type="button" title="open menu">
+      <button class="header-button  button  burger" id="burgerBtn" type="button" title="open menu">
         <span class="visually-hidden">open menu</span>
         <svg width="26" height="23" viewBox="0 0 26 23" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
