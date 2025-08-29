@@ -48,6 +48,10 @@ a:hover {
   overflow: hidden !important;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-family-second);
   color: var(--color-light-gray);
@@ -105,6 +109,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .button:hover {
   background-color: var(--color-gray);
+  cursor: pointer;
 }
 
 .menu-link {
@@ -518,7 +523,7 @@ h1, h2, h3, h4, h5, h6 {
 .banner-images {
   position: relative;
   z-index: 2;
-background-color: var(--color-light-gray);
+  background-color: var(--color-light-gray);
 }
 
 .banner-img {
@@ -546,7 +551,7 @@ background-color: var(--color-light-gray);
 .banner-getstarted {
   display: flex;
   justify-content: space-between;
-  column-gap: 2px;
+  gap: 2px;
   text-transform: uppercase;
 }
 
@@ -2300,6 +2305,7 @@ height: 100%;
 
   .banner-getstarted {
     flex-direction: column;
+    gap: 1px;
   }
 
   .banner-img {

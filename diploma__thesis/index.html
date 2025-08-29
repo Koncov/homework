@@ -16,17 +16,17 @@
   <div class="modal-content">
     <button class="close" id="closeBtn">✕</button>
     <nav>
-      <a href="#">HOME</a>
-      <a href="#">CATALOGS</a>
-      <a href="#">BLOG</a>
-      <a href="#">COLLECTIONS</a>
-      <a href="#">CONTACT US</a>
+      <a href="#header">HOME</a>
+      <a href="#catalogs">CATALOGS</a>
+      <a href="#blog">BLOG</a>
+      <a href="#collections">COLLECTIONS</a>
+      <a href="#contacts">CONTACT US</a>
     </nav>
   </div>
 </div>
 
 <body>
-  <header class="header container">
+  <header class="header container" id="header">
     <a href="#" class="header-logo">
       <img class="header-logo-image" src="./images/icon/logo.png" alt="Pulse LOGO" width="198" height="38"
         loading="lazy">
@@ -37,16 +37,16 @@
           <a class="header-menu-link menu-link is-current" href="#">Home</a>
         </li>
         <li class="header-menu-item">
-          <a class="header-menu-link menu-link" href="#">Catalogs</a>
+          <a class="header-menu-link menu-link" href="#catalogs">Catalogs</a>
         </li>
         <li class="header-menu-item">
-          <a class="header-menu-link menu-link" href="#">Blog</a>
+          <a class="header-menu-link menu-link" href="#blog">Blog</a>
         </li>
         <li class="header-menu-item">
-          <a class="header-menu-link menu-link" href="#">Collections</a>
+          <a class="header-menu-link menu-link" href="#collections">Collections</a>
         </li>
         <li class="header-menu-item">
-          <a class="header-menu-link menu-link" href="#">Contact us</a>
+          <a class="header-menu-link menu-link" href="#contacts">Contact us</a>
         </li>
       </ul>
     </nav>
@@ -162,7 +162,7 @@
       </div>
     </section>
 
-    <section class="slider-promo">
+    <section class="slider-promo" id="catalogs">
       <h2 class="visually-hidden">Proposed BAD for consumption.</h2>
       <div class="slider-promo-mySwiper swiper ">
         <div class="slider-promo-wrapper swiper-wrapper">
@@ -529,7 +529,7 @@
       </div>
     </section>
 
-    <section class="briefly-about">
+    <section class="briefly-about" id="blog">
       <h2 class="visually-hidden">Brief description of the club's activities</h2>
       <div class="briefly-about-wrapper">
 
@@ -685,7 +685,7 @@
       </div>
     </section>
 
-    <section class="promo-about">
+    <section class="promo-about" id="collections">
       <h2 class="visually-hidden">Demonstration of the main activities of the training club</h2>
 
       <div class="promo-about-cards">
@@ -1421,7 +1421,7 @@
 
   </main>
 
-  <footer class="footer">
+  <footer class="footer" id="contacts">
     <div class="footer-wrapper">
       <h2 class="visually-hidden">Contact and legal information</h2>
 

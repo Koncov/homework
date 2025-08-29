@@ -24,22 +24,30 @@
   const closeBtn = document.getElementById('closeBtn');
   const menuModal = document.getElementById('menuModal');
 
+  function closeModal() {
+    menuModal.classList.remove('active');
+    unlockBodyScroll();
+  }
+
   burgerBtn.addEventListener('click', () => {
     menuModal.classList.add('active');
     lockBodyScroll();
   });
 
-  closeBtn.addEventListener('click', () => {
-    menuModal.classList.remove('active');
-    unlockBodyScroll();
-  });
+  closeBtn.addEventListener('click', closeModal);
 
-  // закрытие по клику вне меню
   menuModal.addEventListener('click', (e) => {
     if (e.target === menuModal) {
-      menuModal.classList.remove('active');
-      unlockBodyScroll();
+      closeModal();
     }
+  });
+
+  // закрытие по клику на ссылку в меню
+  const menuLinks = menuModal.querySelectorAll('nav a[href^="#"]');
+  menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      closeModal();
+    });
   });
 
 
