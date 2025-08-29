@@ -406,7 +406,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 3rem;
   aspect-ratio: 1;
   background-color: var(--color-orange);
-  z-index: 1010;
+  z-index: 1012;
 }
 /*#endregion*/
 
@@ -518,7 +518,7 @@ h1, h2, h3, h4, h5, h6 {
 .banner-images {
   position: relative;
   z-index: 2;
-
+background-color: var(--color-light-gray);
 }
 
 .banner-img {
@@ -538,7 +538,7 @@ h1, h2, h3, h4, h5, h6 {
   aspect-ratio: 1;
 }
 
-.banner-link path:hover {
+.banner-link:hover path {
   fill: var(--color-light-gray);
   transition-duration: var(--transition-duration);
 }
@@ -1888,10 +1888,8 @@ height: 100%;
   }
 
   .banner-link {
-    top: calc(-5.25em / 2);
-    left: 50%;
-    width: 5.25em;
-    aspect-ratio: 1;
+    top: calc(-8.75em / 2);
+    width: 8.75em;
   }
 
   .banner-getstarted-link {
@@ -2009,12 +2007,6 @@ height: 100%;
   .banner-body {
     padding-top: 25px;
     margin-bottom: -25px;
-  }
-
-  .banner-link {
-    top: calc(-4.25em / 2);
-    width: 4.25em;
-    aspect-ratio: 1;
   }
 
   .banner-getstarted-link {
@@ -2137,9 +2129,8 @@ height: 100%;
   }
 
   .banner-link {
-    top: calc(-3.5em / 2);
-    width: 3.5em;
-    aspect-ratio: 1;
+    top: calc(-6.3em / 2);
+    width: 6.3em;
   }
 
   .slider-promo-slide::before {
@@ -2290,7 +2281,7 @@ height: 100%;
   }
 
   .header-actions {
-      column-gap: 5px;
+      column-gap: 8px;
   }
 
   .header-menu-list {
@@ -2303,24 +2294,37 @@ height: 100%;
     margin-bottom: -12px;
   }
 
-.backdrop-title::after {
+  .backdrop-title::after {
   -webkit-text-stroke: 1px var(--color-white);
   }
 
-  .banner-link {
-    top: calc(-2.5em / 2);
-    width: 2.5em;
-    aspect-ratio: 1;
+  .banner-getstarted {
+    flex-direction: column;
+  }
+
+  .banner-img {
+    width: auto;
+    height: 140px;
   }
 
   .banner-getstarted-link {
-    height: clamp(100px, 10.45vw , 220px);
+    height: 100%;
     padding: 10px;
   }
 
-  .banner-getstarted-card-p {
-    padding-bottom: 40px;
-  }
+.banner-getstarted-card h4 {
+  font-size: 12px;
+}
+
+.banner-getstarted-card-p {
+  font-size: 15px;
+  padding-bottom: 20px;
+}
+
+.banner-getstarted-card--get-p {
+  font-size: 12px;
+  padding: 0;
+}
 
   .slider-promo-wrapper {
     padding: 20px 25px 70px 20px;
@@ -2466,17 +2470,9 @@ height: 100%;
   }
 
   .banner-link {
-    top: calc(-2em / 2);
-    width: 2em;
-    aspect-ratio: 1;
-  }
-
-  .banner-getstarted-link {
-    height: clamp(80px, 10.45vw , 220px);
-  }
-
-  .banner-getstarted-card-p {
-    padding-bottom: 18px;
+    top: calc(-5em / 2);
+    left: 45%;
+    width: 5em;
   }
 
 .service-promo-service-bar {
