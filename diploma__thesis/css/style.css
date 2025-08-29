@@ -611,12 +611,29 @@ h1, h2, h3, h4, h5, h6 {
 /*#region*/
 /* Все точки */
 .swiper-pagination-bullet {
-  width: 14px;
-  height: 14px;
+  width: 18px;
+  height: 18px;
   background: var(--color-white);
   border-radius: 50%;
   opacity: 1;
   display: inline-block;
+  position: relative;
+}
+
+.swiper-pagination-bullet::before {
+  content: '';
+
+  position: absolute;
+    top: -1em;
+    left: -1em;
+    width: 3em;
+  aspect-ratio: 1;
+  background: transparent;
+  border-radius: 50%;
+  opacity: 1;
+  display: inline-block;
+
+  /* border: 1px solid #cb6b24; */
 }
 
 /* Активный кружок с числом */
@@ -712,7 +729,7 @@ z-index: -1;
 .slider-promo-slide--content--text-title {
   font-family: var(--font-family-first);
   font-weight: 500;
-  font-size: clamp(12px, 1.56vw, 30px);
+  font-size: clamp(16px, 1.56vw, 30px);
   color: var(--color-white);
   padding-bottom: 10px;
 }
@@ -2364,11 +2381,15 @@ height: 100%;
   .slider-promo-button {
     border-left: 3px solid var(--color-white);
     height: 50px;
-    padding-inline: 41px;
-    font-size: 12px;
+    padding-inline: 45px;
+    font-size: 14px;
     white-space: nowrap;
     margin-bottom: 0px;
   }
+
+  .slider-promo-button:hover {
+    border-left: 3px solid var(--color-light-gray);
+}
 
   .slider-promo-slide--content {
     width: 100%;
