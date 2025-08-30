@@ -180,7 +180,7 @@ h1, h2, h3, h4, h5, h6 {
 .card-title {
   font-family: var(--font-family-first);
   font-weight: 500;
-  font-size: clamp(15px, 3.64vw, 70px);
+  font-size: clamp(25px, 3.64vw, 70px);
   color: var(--color-white);
   text-transform: uppercase;
   position: relative;
@@ -197,15 +197,15 @@ h1, h2, h3, h4, h5, h6 {
   z-index: -1;
   font-family: var(--font-family);
   font-weight: 600;
-  font-size: clamp(20px, 20.67vw, 397px);
+  font-size: clamp(15px, 20.67vw, 397px);
   line-height: 0.98;
 }
 
 .card-text {
-  width: clamp(50px, 24.37vw, 468px);
+  width: clamp(340px, 24.37vw, 468px);
   font-family: var(--font-family-second);
   font-weight: 400;
-  font-size: clamp(6px, 0.83vw, 16px);
+  font-size: clamp(14px, 0.83vw, 16px);
   line-height: 1.69;
   color: var(--color-light-gray);
   text-align: center;
@@ -272,7 +272,7 @@ h1, h2, h3, h4, h5, h6 {
   gap: clamp(5px,0.83vw ,16px);
   font-family: var(--font-family-second);
   font-weight: 600;
-  font-size: clamp(6px, 1.04vw, 20px);
+  font-size: clamp(14px, 1.04vw, 20px);
   letter-spacing: 0.2em;
   color: var(--color-orange);
   text-transform: uppercase;
@@ -280,8 +280,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .card-animation-text span {
-  width: clamp(2px, 0.31vw, 6px);
-  height: clamp(2px, 0.31vw, 6px);
+  width: clamp(6px, 0.31vw, 6px);
+  height: clamp(6px, 0.31vw, 6px);
   background-color: var(--color-white);
   border-radius: 50%;
 }
@@ -290,7 +290,7 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-flex;
   font-family: var(--font-family-first);
   font-weight: 600;
-  font-size: clamp(10px, 2.18vw, 42px);
+  font-size: clamp(18px, 2.18vw, 42px);
   color: var(--color-white);
   margin-top: -7px;
   padding-bottom: clamp(5px, 1.51vw, 29px);
@@ -600,7 +600,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .banner-getstarted-card--get svg {
-  width: clamp(8px, 1.14vw, 22px);
+  width: clamp(13px, 1.14vw, 22px);
   aspect-ratio: 1;
 }
 
@@ -849,10 +849,10 @@ z-index: -1;
   align-items: center;
   font-family: var(--font-family-first);
   font-weight: 400;
-  font-size: clamp(16px, 5.2vw, 100px);
+  font-size: clamp(18px, 5.2vw, 100px);
   color: var(--color-very-dark);
   white-space: nowrap;
-  margin: clamp(5px, 1.77vw, 34px) 0;
+  margin: clamp(10px, 1.77vw, 34px) 0;
   text-transform: uppercase;
 }
 
@@ -861,7 +861,7 @@ z-index: -1;
   justify-self: center;
   align-items: center;
   border-radius: 50%;
-  width: clamp(4px, 0.72vw, 14px);
+  width: clamp(6px, 0.72vw, 14px);
   aspect-ratio: 1;
   background: var(--color-orange);
 }
@@ -887,7 +887,7 @@ z-index: -1;
   background: var(--color-light);
   border-right: 1px solid var(--color-very-dark);
   border-left: 1px solid var(--color-very-dark);
-  height: clamp(20px, 7.5vw, 144px);
+  height: clamp(40px, 7.5vw, 144px);
   padding: 0 clamp(10px, 2.76vw, 53px);
 }
 
@@ -907,15 +907,15 @@ z-index: -1;
 .service-promo-card-p {
   font-family: var(--second-family);
   font-weight: 700;
-  font-size: clamp(6px, 0.83vw, 16px);
+  font-size: clamp(14px, 0.83vw, 16px);
   line-height: 1.44;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #141414;
+  color: var(--color-dark);
 }
 
 .service-promo-card-about svg {
-  width: clamp(10px, 2.34vw, 45px);
+  width: clamp(30px, 2.34vw, 45px);
   aspect-ratio: 1;
 }
 
@@ -2193,17 +2193,21 @@ height: 100%;
     border-left: 0;
   }
 
-.card-about-first {
-  border-right: 1px solid var(--color-very-dark);
+  .card-animation-text {
+    font-size: 11px;
+}
+
+  .card-about-first {
+    border-right: 1px solid var(--color-very-dark);
   }
 
-.card-about-last {
-  border-left: 1px solid var(--color-very-dark);
+  .card-about-last {
+    border-left: 1px solid var(--color-very-dark);
   }
 
-.card-animation::before {
-  bottom: -3px;
-  height: 4px;
+  .card-animation::before {
+    bottom: -3px;
+    height: 4px;
   }
 
   .briefly-about-wrapper {
@@ -2335,19 +2339,19 @@ height: 100%;
     padding: 10px;
   }
 
-.banner-getstarted-card h4 {
-  font-size: 12px;
-}
+  .banner-getstarted-card h4 {
+    font-size: 12px;
+  }
 
-.banner-getstarted-card-p {
-  font-size: 15px;
-  padding-bottom: 20px;
-}
+  .banner-getstarted-card-p {
+    font-size: 15px;
+    padding-bottom: 20px;
+  }
 
-.banner-getstarted-card--get-p {
-  font-size: 12px;
-  padding: 0;
-}
+  .banner-getstarted-card--get-p {
+    font-size: 12px;
+    padding: 0;
+  }
 
   .slider-promo-wrapper {
     padding: 20px 25px 70px 20px;
@@ -2362,7 +2366,7 @@ height: 100%;
     z-index: 6;
   }
   
-.slider-promo-slide::before {
+  .slider-promo-slide::before {
     right: -17;
     width: 345px;
     height: 345px;
@@ -2376,7 +2380,7 @@ height: 100%;
   .slider-promo-slide--content-title-p {
     color: var(--color-light-gray);
     text-shadow: 0 0 1px var(--color-white);
-}
+  }
 
   .slider-promo-button {
     border-left: 3px solid var(--color-white);
@@ -2389,7 +2393,7 @@ height: 100%;
 
   .slider-promo-button:hover {
     border-left: 3px solid var(--color-light-gray);
-}
+  }
 
   .slider-promo-slide--content {
     width: 100%;
@@ -2400,18 +2404,37 @@ height: 100%;
     margin-bottom: 20px;
   }
 
-.service-promo-service-bar {
+  .service-promo-cards {
+    flex-direction: column;
+}
+
+  .service-promo-service-bar {
     margin: 0 -7px;
   }
 
-.our-programs-text {
-  width: 220px;
-  font-size: 8px;
-  margin-top: 10px;
+.our-programs-cards {
+    flex-direction: column;
+    gap: clamp(5px, 2.18vw, 42px);
+}
+
+  .our-programs-text {
+    margin-top: 10px;
   }
 
-.our-programs-title::before {
-  -webkit-text-stroke: 1px var(--color-white);
+  .card-animation-text {
+    gap: 15px;
+    font-size: 14px;
+    padding-top: 14px;
+  }
+
+  .card-animation-title {
+    font-size: clamp(22px, 2.18vw, 42px);
+    margin-top: -7px;
+    padding-bottom: clamp(5px, 1.51vw, 29px);
+  }
+
+  .our-programs-title::before {
+    -webkit-text-stroke: 1px var(--color-white);
   }
 
   .briefly-about-wrapper {
@@ -2532,26 +2555,8 @@ height: 100%;
 }
 /*#endregion*/
 
-/* .header,
-.banner,
-.slider-promo,
-.service-promo,
-.our-programs,
-.timetable,
-.briefly-about,
-.promo-about,
-.classes-timetable,
-.timetable-video,
-.location-centers,
-.presentation-professionals,
-.last-blog {
-  display: none;
-} */
 
 
-/* ===============  Temp
-
-================ */
 
 
 /*#region*/
