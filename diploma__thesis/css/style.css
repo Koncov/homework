@@ -300,15 +300,15 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: clamp(5px, 1.45vw, 28px);
+  gap: clamp(20px, 1.45vw, 28px);
   width: 100%;
-  height: clamp(10px, 5.62vw, 108px);
+  padding-block: clamp(10px, 1.66vw, 32px);
   background-color: var(--color-orange);
   transition-duration: var(--transition-duration);
 
   font-family: var(--font-family-second);
   font-weight: 700;
-  font-size: clamp(8px, 0.83vw, 16px);
+  font-size: clamp(14px, 0.83vw, 16px);
   line-height: 1.44;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -321,7 +321,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .get-link svg {
-  width: clamp(15px, 2.34vw, 45px);
+  width: clamp(30px, 2.34vw, 45px);
   aspect-ratio: 1;
 }
 /*#endregion*/
@@ -952,11 +952,13 @@ z-index: -1;
 
 .timetable-wrapper-logo {
     content: '';
-    width: 13%;
+    width: 20%;
     aspect-ratio: 1;
     position: absolute;
-    top: 34.5%;
-    left: 43.5%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background: url(../images/promo/promo-icon.png) center / contain no-repeat;
     z-index: 10;
 }
@@ -987,10 +989,10 @@ z-index: -1;
   z-index: 1;
 }
 
-.timetable-overlay:hover {
+/* .timetable-overlay:hover {
   opacity: 0;
   transition-duration: var(--transition-duration);
-}
+} */
 
 .timetable-overlay-img {
   width: clamp(10px, 5.18vw, 99.5px);
@@ -2412,19 +2414,24 @@ height: 100%;
     margin: 0 -7px;
   }
 
-.our-programs-cards {
+  .our-programs-cards {
     flex-direction: column;
     gap: clamp(5px, 2.18vw, 42px);
-}
+  }
 
   .our-programs-text {
     margin-top: 10px;
   }
 
+
   .card-animation-text {
     gap: 15px;
     font-size: 14px;
     padding-top: 14px;
+  }
+
+  .our-programs-title::before {
+    -webkit-text-stroke: 1px var(--color-white);
   }
 
   .card-animation-title {
@@ -2433,9 +2440,42 @@ height: 100%;
     padding-bottom: clamp(5px, 1.51vw, 29px);
   }
 
-  .our-programs-title::before {
-    -webkit-text-stroke: 1px var(--color-white);
+  .timetable-wrapper-logo {
+    width: 25%;
   }
+
+  .timetable-wrapper-images {
+    flex-direction: column;
+  }
+
+  .timetable-overlay-img {
+    width: 30px;
+  }
+
+  .timetable-overlay-text {
+    font-family: var(--font-family-first);
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+    color: var(--color-white);
+    margin-bottom: clamp(1px, 2.18vw, 42px);
+    text-transform: uppercase;
+  }
+
+  .timetable-overlay hr {
+    width: 50px;
+    height: 2px;
+  }
+
+  .timetable-overlay-designer {
+    font-size: 18px;
+  }
+
+  .timetable-overlay-name {
+    font-size: 16px;
+  }
+
+
 
   .briefly-about-wrapper {
     display: flex;
