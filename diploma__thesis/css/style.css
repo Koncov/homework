@@ -1093,7 +1093,7 @@ height: 100%;
 .briefly-about-content-title {
   font-family: var(--font-family-first);
   font-weight: 500;
-  font-size: clamp(10px, 1.56vw, 30px);
+  font-size: clamp(15px, 1.56vw, 30px);
   color: var(--color-dark);
   margin-bottom: 5px;
 }
@@ -1331,8 +1331,9 @@ height: 100%;
   display: inline-block;
   font-family: var(--font-family-first);
   font-weight: 500;
-  font-size: clamp(10px, 1.56vw, 30px);
+  font-size: clamp(15px, 1.56vw, 30px);
   color: var(--color-white);
+  white-space: nowrap;
 }
 
 .classes-timetable-link::before {
@@ -1348,7 +1349,6 @@ height: 100%;
 
 .classes-timetable-wrapper {
   display: flex;
-  justify-content: space-around;
   width: 100%;
   overflow-x: auto;
   white-space: nowrap;
@@ -1373,15 +1373,34 @@ height: 100%;
   width: 100%;
 }
 
+
 .classes-timetable-content-table :is(th, td) {
   font-family: var(--font-family-first);
   font-weight: 400;
-  font-size: clamp(10px, 1.04vw, 20px);
+  font-size: clamp(16px, 1.04vw, 20px);
   text-align: center;
-  color: #b5b5b5;
+  color: var(--color-white);
   width: 160px;
   /* width: clamp(1px, 8.33vw, 160px); */
   height: 113px;
+}
+
+.classes-timetable-content-table :is(th, td) p {
+font-family: var(--font-family-second);
+font-weight: 400;
+font-size: 16px;
+line-height: 1.69;
+text-align: center;
+color: var(--color-light-gray);
+}
+
+.classes-timetable-content-table :is(th),
+.classes-timetable-content-table .classes-timetable-time {
+font-family: var(--font-family-first);
+font-weight: 400;
+font-size: clamp(16px, 1.04vw, 20px);
+text-align: center;
+color: #b5b5b5;
 }
 
 .classes-timetable-content-table :is(th) {
@@ -2199,6 +2218,11 @@ height: 100%;
     font-size: 11px;
 }
 
+  .classes-timetable-link.is-current::before {
+    top: 15%;
+    left: -0.42em;
+  }
+
   .card-about-first {
     border-right: 1px solid var(--color-very-dark);
   }
@@ -2423,7 +2447,6 @@ height: 100%;
     margin-top: 10px;
   }
 
-
   .card-animation-text {
     gap: 15px;
     font-size: 14px;
@@ -2508,41 +2531,13 @@ height: 100%;
     font-size: 15px;
   }
 
-  .briefly-about-content-title {
-    font-family: var(--font-family-first);
-    font-weight: 500;
-    font-size: clamp(10px, 1.56vw, 30px);
-
-  }
-
-
-
-
-
   .classes-timetable-link::before {
-    content: "";
-    position: absolute;
-    top: 17%;
-    left: -0.32em;
-    z-index: -1;
-    width: clamp(10px, 2.18vw, 42px);
-    aspect-ratio: 1;
-    background-color: var(--color-orange);
-    border-radius: 50%;
-    transition-duration: var(--transition-duration);
-    opacity: 0;
+    width: 16px;
   }
 
-  .classes-timetable-link:hover::before {
-    opacity: 1;
-  }
-
-  .classes-timetable-link.is-current::before {
-    content: "";
-    position: absolute;
-    top: 17%;
-    left: -0.32em;
-    opacity: 1;
+  .classes-timetable-list {
+    display: flex;
+    gap: 8px;
   }
 
   .presentation-professionals::before {
@@ -2624,7 +2619,25 @@ height: 100%;
 /*#endregion*/
 
 
+.header,
+.banner,
+.slider-promo,
+.service-promo,
+.our-programs,
+.timetable,
+.briefly-about,
+.promo-about,
+/* .classes-timetable, */
+.timetable-video,
+.location-centers,
+.location-centers,
+.presentation-professionals,
+.last-blog,
+.footer
 
+{
+  display: none;
+}
 
 
 /*#region*/
