@@ -989,11 +989,6 @@ z-index: -1;
   z-index: 1;
 }
 
-/* .timetable-overlay:hover {
-  opacity: 0;
-  transition-duration: var(--transition-duration);
-} */
-
 .timetable-overlay-img {
   width: clamp(10px, 5.18vw, 99.5px);
   height: auto;
